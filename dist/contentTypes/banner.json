@@ -1,80 +1,48 @@
 {
   "$schema": "http://bigcontent.io/cms/schema/v1/schema#",
-  "id": "https://unpkg.com/dc-accelerators-content-rendering-service/dist/contentTypes/banner.json",
-  "title": "Banner Accelerator",
-  "description": "Banner Accelerator",
+  "id": "https://unpkg.com/dynamic-content-accelerators/dist/contentTypes/banner.json",
+  "title": "Banner",
+  "description": "Banner accelerator",
   "allOf": [
     {
       "$ref": "http://bigcontent.io/cms/schema/v1/core#/definitions/content"
     }
   ],
-  "propertyOrder": [
-    "bannerImage",
-    "subheader",
-    "header",
-    "description",
-    "button",
-    "textPositionLeft",
-    "textPositionTop",
-    "textColour",
-    "bannerColor",
-    "bannerOpacity",
-    "style",
-    "stackMobileLayout"
-  ],
   "type": "object",
   "properties": {
     "bannerImage": {
-      "type": "array",
-      "items": {
-        "allOf": [
-          {
-            "$ref": "http://bigcontent.io/cms/schema/v1/core#/definitions/content-link"
-          },
-          {
-            "properties": {
-              "contentType": {
-                "title": "image",
-                "enum": [
-                  "https://unpkg.com/dc-accelerators-content-rendering-service/dist/contentTypes/image.json"
-                ]
-              }
-            }
-          }
-        ]
-      },
-      "maxItems": 1,
-      "title": "Banner Image",
-      "description": "Select or create an image content"
+      "description": "",
+      "type": "object",
+      "allOf": [
+        {
+          "$ref": "https://unpkg.com/dynamic-content-accelerators/dist/contentTypes/image.json"
+        }
+      ],
+      "title": "Banner image"
     },
     "subheader": {
       "type": "string",
       "minLength": 0,
       "maxLength": 255,
-      "title": "Subheader",
-      "description": "add subheader"
+      "title": "Subheader"
     },
     "header": {
       "type": "string",
       "minLength": 0,
       "maxLength": 255,
-      "title": "Header",
-      "description": "add header"
+      "title": "Header"
     },
     "description": {
       "type": "string",
       "minLength": 0,
       "maxLength": 2000,
-      "title": "Description",
-      "description": "add description"
+      "title": "Description"
     },
     "button": {
-      "title": "Button",
-      "description": "add button",
       "type": "object",
       "allOf": [
         {
-          "$ref": "https://unpkg.com/dc-accelerators-content-rendering-service/dist/contentTypes/link.json"
+          "$ref": "https://unpkg.com/dynamic-content-accelerators/dist/contentTypes/accelerator-partials.json#/definitions/link"
         }
       ]
     },
@@ -82,48 +50,42 @@
       "type": "string",
       "minLength": 1,
       "maxLength": 3,
-      "title": "Text Position From The Left",
-      "description": "Enter a percentage value (without a '%' sign) to position text horizontally from the left"
+      "title": "Text position from the left",
+      "description": "Enter a percentage value (without a '%' sign) to position text horizontally from the left (default is 10)"
     },
     "textPositionTop": {
       "type": "string",
       "minLength": 1,
       "maxLength": 3,
-      "title": "Text position from middle",
-      "description": "Enter a percentage value (without a '%' sign) to position text vertically from the middle"
+      "title": "Text position from top",
+      "description": "Enter a percentage value (without a '%' sign) to position text vertically from the top (default is 40)"
     },
-    "textColour": {
+    "textColor": {
       "type": "string",
-      "minLength": 3,
-      "maxLength": 6,
-      "title": "Font Colour",
-      "description": "Enter a hex value for font colour"
+      "format": "color",
+      "title": "Font color"
     },
     "bannerColor": {
       "type": "string",
-      "minLength": 3,
-      "maxLength": 6,
-      "title": "Banner Color",
-      "description": "Enter a hex value for banner colour"
-    },
-    "bannerOpacity": {
-      "type": "number",
-      "title": "Banner Opacity",
-      "description": "Enter a value between 0 and 1 (e.g. 0.3)",
-      "minimum": 0,
-      "maximum": 1.01
-    },
-    "style": {
-      "type": "string",
-      "minLength": 0,
-      "maxLength": 100,
-      "title": "Style",
-      "description": "Add classname for CSS styling"
+      "format": "color",
+      "title": "Copy block color"
     },
     "stackMobileLayout": {
       "type": "boolean",
-      "title": "Stack Mobile Layout",
+      "title": "Stack mobile layout",
       "description": "Enable to allow banner text to stack underneath the image on small screens"
     }
-  }
+  },
+  "propertyOrder": [
+    "bannerImage",
+    "header",
+    "subheader",
+    "description",
+    "textColor",
+    "bannerColor",
+    "textPositionLeft",
+    "textPositionTop",
+    "button",
+    "stackMobileLayout"
+  ]
 }

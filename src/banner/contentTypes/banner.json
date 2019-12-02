@@ -1,0 +1,91 @@
+{
+  "$schema": "http://bigcontent.io/cms/schema/v1/schema#",
+  "id": "{CONTENT_TYPE_BASEPATH}/banner.json",
+  "title": "Banner",
+  "description": "Banner accelerator",
+  "allOf": [
+    {
+      "$ref": "http://bigcontent.io/cms/schema/v1/core#/definitions/content"
+    }
+  ],
+  "type": "object",
+  "properties": {
+    "bannerImage": {
+      "description": "",
+      "type": "object",
+      "allOf": [
+        {
+          "$ref": "{CONTENT_TYPE_BASEPATH}/image.json"
+        }
+      ],
+      "title": "Banner image"
+    },
+    "subheader": {
+      "type": "string",
+      "minLength": 0,
+      "maxLength": 255,
+      "title": "Subheader"
+    },
+    "header": {
+      "type": "string",
+      "minLength": 0,
+      "maxLength": 255,
+      "title": "Header"
+    },
+    "description": {
+      "type": "string",
+      "minLength": 0,
+      "maxLength": 2000,
+      "title": "Description"
+    },
+    "button": {
+      "type": "object",
+      "allOf": [
+        {
+          "$ref": "{CONTENT_TYPE_BASEPATH}/accelerator-partials.json#/definitions/link"
+        }
+      ]
+    },
+    "textPositionLeft": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 3,
+      "title": "Text position from the left",
+      "description": "Enter a percentage value (without a '%' sign) to position text horizontally from the left (default is 10)"
+    },
+    "textPositionTop": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 3,
+      "title": "Text position from top",
+      "description": "Enter a percentage value (without a '%' sign) to position text vertically from the top (default is 40)"
+    },
+    "textColor": {
+      "type": "string",
+      "format": "color",
+      "title": "Font color"
+    },
+    "bannerColor": {
+      "type": "string",
+      "format": "color",
+      "title": "Copy block color"
+    },
+    "stackMobileLayout": {
+      "type": "boolean",
+      "title": "Stack mobile layout",
+      "description": "Enable to allow banner text to stack underneath the image on small screens"
+    }
+  },
+  "propertyOrder": [
+    "bannerImage",
+    "header",
+    "subheader",
+    "description",
+    "textColor",
+    "bannerColor",
+    "textPositionLeft",
+    "textPositionTop",
+    "button",
+    "stackMobileLayout"
+  ]
+}

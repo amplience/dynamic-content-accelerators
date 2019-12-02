@@ -1,0 +1,70 @@
+{
+  "$schema": "http://bigcontent.io/cms/schema/v1/schema#",
+  "id": "{CONTENT_TYPE_BASEPATH}/promo.json",
+  "title": "Promo",
+  "description": "Promo accelerator",
+  "allOf": [
+    {
+      "$ref": "http://bigcontent.io/cms/schema/v1/core#/definitions/content"
+    }
+  ],
+  "type": "object",
+  "properties": {
+    "icon": {
+      "title": "Icon",
+      "type": "object",
+      "allOf": [
+        {
+          "$ref": "http://bigcontent.io/cms/schema/v1/core#/definitions/image-link"
+        }
+      ]
+    },
+    "backgroundColor": {
+      "type": "string",
+      "format": "color",
+      "title": "Background color"
+    },
+    "topLine": {
+      "type": "string",
+      "minLength": 0,
+      "maxLength": 500,
+      "title": "Top line",
+      "description": "Enter top line of the promo"
+    },
+    "toplineColor": {
+      "type": "string",
+      "format": "color",
+      "title": "Top line text color"
+    },
+    "bottomLine": {
+      "type": "string",
+      "minLength": 0,
+      "maxLength": 500,
+      "title": "Bottom line",
+      "description": "Enter bottom line of the promo"
+    },
+    "bottomlineColor": {
+      "type": "string",
+      "format": "color",
+      "title": "Bottom line text color"
+    },
+    "link": {
+      "title": "Link",
+      "type": "object",
+      "allOf": [
+        {
+          "$ref": "{CONTENT_TYPE_BASEPATH}/accelerator-partials.json#/definitions/link"
+        }
+      ]
+    }
+  },
+  "propertyOrder": [
+    "icon",
+    "backgroundColor",
+    "topLine",
+    "toplineColor",
+    "bottomLine",
+    "bottomlineColor",
+    "link"
+  ]
+}

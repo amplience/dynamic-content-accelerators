@@ -14,44 +14,55 @@ export const sampleContent = {
     "schema": "https://dev-solutions.s3.amazonaws.com/DynamicContentTypes/Accelerators/promobannersection.json",
     "name": "promo-banner-single-section"
   },
-  "topLine": "Click here to score 20% off with your first app order* (t&c’s apply)",
+  "topLine": "Click here to score 20% off with your first app order* (t&c’s apply) Click here to score 20% off with your first app order* (t&c’s apply)",
   "link": {
     "_meta": {
       "schema": "https://dev-solutions.s3.amazonaws.com/DynamicContentTypes/Accelerators/link.json"
     },
     "value": "http://dev-solutions.s3.amazonaws.com/dc-demo-site/dist/productlist/index.html?c=f49907fd-99df-4446-85b7-4c3235aac82a&s=e6bdb253-db3c-4458-b5cc-0d90aa02e114"
   },
-  "backgroundColour": "d3d3d3",
-  "toplineColour": "000000",
-  "@type": "https://dev-solutions.s3.amazonaws.com/DynamicContentTypes/Accelerators/promobannersection.json"
+  "icon": {
+    "_meta": {
+      "schema": "http://bigcontent.io/cms/schema/v1/core#/definitions/image-link"
+    },
+    "id": "e028b665-2cc5-4013-b884-765d7f50e58c",
+    "name": "promoiconwireframe",
+    "endpoint": "csdemo",
+    "defaultHost": "i1.adis.ws",
+    "@id": "http://image.cms.amplience.com/e028b665-2cc5-4013-b884-765d7f50e58c",
+    "mediaType": "image"
+  },
+  "backgroundColor": "rgb(211,211,211)",
+  "toplineColor": "rgb(0,0,0)",
+  "@type": "https://dev-solutions.s3.amazonaws.com/DynamicContentTypes/Accelerators/promo.json"
 };
 
 
-const samplePromoListContent = {
+export const samplePromoListContent = {
   "@id": "http://content.cms.amplience.com/1b05fb00-e845-412b-80e0-33ee82789913",
   "_meta": {
     "schema": "https://dev-solutions.s3.amazonaws.com/DynamicContentTypes/Accelerators/promobanner.json",
     "name": "accelerator-promo-banner-1"
   },
-  "bannerSection": [{
-      "@id": "http://content.cms.amplience.com/990ecee0-6976-496a-8b77-d23cb4e42976",
-      "@type": "https://dev-solutions.s3.amazonaws.com/DynamicContentTypes/Accelerators/promobannersection.json",
-      "_meta": {
-        "schema": "https://dev-solutions.s3.amazonaws.com/DynamicContentTypes/Accelerators/promobannersection.json",
-        "name": "accelerator-promo-banner-section-1"
-      },
-      "topLine": "free next uk day delivery",
-      "link": {
-        "_meta": {
-          "schema": "https://dev-solutions.s3.amazonaws.com/DynamicContentTypes/Accelerators/link.json"
-        },
-        "value": "http://dev-solutions.s3.amazonaws.com/dc-demo-site/dist/productlist/index.html?c=f49907fd-99df-4446-85b7-4c3235aac82a&s=e6bdb253-db3c-4458-b5cc-0d90aa02e114"
-      },
-      "backgroundColour": "000000",
-      "bottomLine": "hurry ends in 3 days",
-      "bottomlineColour": "ffffff",
-      "toplineColour": "ffffff"
+  "promoItems": [{
+    "@id": "http://content.cms.amplience.com/990ecee0-6976-496a-8b77-d23cb4e42976",
+    "@type": "https://dev-solutions.s3.amazonaws.com/DynamicContentTypes/Accelerators/promobannersection.json",
+    "_meta": {
+      "schema": "https://dev-solutions.s3.amazonaws.com/DynamicContentTypes/Accelerators/promobannersection.json",
+      "name": "accelerator-promo-banner-section-1"
     },
+    "topLine": "free next uk day delivery",
+    "link": {
+      "_meta": {
+        "schema": "https://dev-solutions.s3.amazonaws.com/DynamicContentTypes/Accelerators/link.json"
+      },
+      "value": "http://dev-solutions.s3.amazonaws.com/dc-demo-site/dist/productlist/index.html?c=f49907fd-99df-4446-85b7-4c3235aac82a&s=e6bdb253-db3c-4458-b5cc-0d90aa02e114"
+    },
+    "backgroundColor": "rgb(0,0,0)",
+    "bottomLine": "hurry ends in 3 days",
+    "bottomlineColor": "rgb(255,255,255)",
+    "toplineColor": "rgb(255,255,255)"
+  },
     {
       "@id": "http://content.cms.amplience.com/90e694ec-a761-4c32-8581-b6c14ea37690",
       "@type": "https://dev-solutions.s3.amazonaws.com/DynamicContentTypes/Accelerators/promobannersection.json",
@@ -66,10 +77,10 @@ const samplePromoListContent = {
         },
         "value": "http://dev-solutions.s3.amazonaws.com/dc-demo-site/dist/productlist/index.html?c=f49907fd-99df-4446-85b7-4c3235aac82a&s=e6bdb253-db3c-4458-b5cc-0d90aa02e114"
       },
-      "backgroundColour": "ffffff",
+      "backgroundColor": "rgb(255,255,255)",
       "bottomLine": "t&c's apply, code: wrapup",
-      "bottomlineColour": "000000",
-      "toplineColour": "000000"
+      "bottomlineColor": "rgb(0,0,0)",
+      "toplineColor": "rgb(0,0,0)"
     },
     {
       "@id": "http://content.cms.amplience.com/da807558-e551-4ed1-a73a-3530a24abc6b",
@@ -85,12 +96,12 @@ const samplePromoListContent = {
         },
         "value": "http://dev-solutions.s3.amazonaws.com/dc-demo-site/dist/productlist/index.html?c=f49907fd-99df-4446-85b7-4c3235aac82a&s=e6bdb253-db3c-4458-b5cc-0d90aa02e114"
       },
-      "backgroundColour": "d3d3d3",
+      "backgroundColor": "rgb(211,211,211)",
       "bottomLine": "excludes sale. t&c's apply",
-      "toplineColour": "000000"
+      "toplineColor": "rgb(0,0,0)"
     }
   ],
-  "@type": "https://dev-solutions.s3.amazonaws.com/DynamicContentTypes/Accelerators/promobanner.json"
+  "@type": "https://dev-solutions.s3.amazonaws.com/DynamicContentTypes/Accelerators/promolist.json"
 };
 
 storiesOf('Promo', module)

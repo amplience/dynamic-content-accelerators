@@ -4,7 +4,7 @@
 
 > Extensible content types and rendering templates for use with the Amplience Rendering Service
 
-[![github version](https://img.shields.io/github/release/amplience/dc-accelerators-content-rendering-service.svg)](https://github.com/amplience/dc-accelerators-content-rendering-service/releases/latest) [![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
+[![github version](https://img.shields.io/github/release/amplience/dynamic-content-accelerators.svg)](https://github.com/amplience/dynamic-content-accelerators/releases/latest) [![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
 
 This project is designed to accelerate implementing Amplience Dynamic Content. It contains a set of commonly used components implemented as handlebars templates that can be rendered by the [Content Rendering Service](https://docs.amplience.net/integration/contentrenderingservice.html#the-content-rendering-service).
 
@@ -52,7 +52,7 @@ npm install --global gulp-cli
 2. Run gulp:
 
 ```
-gulp
+gulp buildAll
 ```
 
 This will export the following files:
@@ -63,6 +63,7 @@ This will export the following files:
 | dist/templates      | [Content Rendering Service](https://docs.amplience.net/integration/contentrenderingservice.html#the-content-rendering-service) templates which render content to HTML. |
 | dist/icons          | Icons for each component.                                                                                                                                              |
 | dist/styles.min.css | CSS Styles for the components.                                                                                                                                         |
+| dist/cardsStyles.min.css | CSS Styles for the cards.                                                                                                                                         |
 | dist/utils.min.js   | JavaScript which adds functionality to the components.                                                                                                                 |
 | dist/lory.min.js    | [JavaScript Library](https://github.com/loryjs/lory) required by the Slider component.                                                                                 |
 
@@ -109,13 +110,14 @@ if (window.AmpCa && window.AmpCa.Utils) {
 * [Extending Storybook](./docs/EXTENDING-STORYBOOK.md)
 * [Template dependencies](./docs/TEMPLATE-DEPENDENCIES.md)
 * [Hosting Content Types externally](./docs/EXTERNAL-CONTENT-TYPES.md)
+* [Configuring images](./docs/CONFIGURING-IMAGES.md)
 
 ## Getting Help
 If you need help please reach out using one of the following channels:
 
 * Ask a question on [StackOverflow](https://stackoverflow.com/) using the tag `amplience-dynamic-content`
 * Contact your [Amplience Customer Success](https://amplience.com/customer-success) representative
-* If you have found a bug please report it by [opening an issue](https://github.com/amplience/dc-accelerators-content-rendering-service/issues/new)
+* If you have found a bug please report it by [opening an issue](https://github.com/amplience/dynamic-content-accelerators/issues/new)
 
 ## License
 

@@ -1,18 +1,12 @@
 {
   "$schema": "http://bigcontent.io/cms/schema/v1/schema#",
-  "id": "https://unpkg.com/dc-accelerators-content-rendering-service/dist/contentTypes/blogpost.json",
-  "title": "Blog Post Accelerator",
-  "description": "Blog Post Accelerator",
+  "id": "https://unpkg.com/dynamic-content-accelerators/dist/contentTypes/blogpost.json",
+  "title": "Blog post",
+  "description": "Blog post accelerator",
   "allOf": [
     {
       "$ref": "http://bigcontent.io/cms/schema/v1/core#/definitions/content"
     }
-  ],
-  "propertyOrder": [
-    "snippet",
-    "title",
-    "keywords",
-    "content"
   ],
   "type": "object",
   "properties": {
@@ -22,7 +16,7 @@
       "description": "",
       "allOf": [
         {
-          "$ref": "https://unpkg.com/dc-accelerators-content-rendering-service/dist/contentTypes/snippet.json"
+          "$ref": "https://unpkg.com/dynamic-content-accelerators/dist/contentTypes/accelerator-partials.json#/definitions/snippet"
         }
       ]
     },
@@ -30,8 +24,7 @@
       "type": "string",
       "minLength": 0,
       "maxLength": 255,
-      "title": "Title",
-      "description": ""
+      "title": "Title"
     },
     "content": {
       "type": "array",
@@ -45,12 +38,12 @@
               "contentType": {
                 "title": "Content",
                 "enum": [
-                  "https://unpkg.com/dc-accelerators-content-rendering-service/dist/contentTypes/banner.json",
-                  "https://unpkg.com/dc-accelerators-content-rendering-service/dist/contentTypes/image.json",
-                  "https://unpkg.com/dc-accelerators-content-rendering-service/dist/contentTypes/video.json",
-                  "https://unpkg.com/dc-accelerators-content-rendering-service/dist/contentTypes/text.json",
-                  "https://unpkg.com/dc-accelerators-content-rendering-service/dist/contentTypes/cardlist.json",
-                  "https://unpkg.com/dc-accelerators-content-rendering-service/dist/contentTypes/blogpost.json"
+                  "https://unpkg.com/dynamic-content-accelerators/dist/contentTypes/banner.json",
+                  "https://unpkg.com/dynamic-content-accelerators/dist/contentTypes/image.json",
+                  "https://unpkg.com/dynamic-content-accelerators/dist/contentTypes/video.json",
+                  "https://unpkg.com/dynamic-content-accelerators/dist/contentTypes/text.json",
+                  "https://unpkg.com/dynamic-content-accelerators/dist/contentTypes/cardlist.json",
+                  "https://unpkg.com/dynamic-content-accelerators/dist/contentTypes/blogpost.json"
                 ]
               }
             }
@@ -59,8 +52,12 @@
       },
       "minItems": 0,
       "maxItems": 20,
-      "title": "Content",
-      "description": ""
+      "title": "Content"
     }
-  }
+  },
+  "propertyOrder": [
+    "snippet",
+    "title",
+    "content"
+  ]
 }

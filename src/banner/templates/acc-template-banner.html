@@ -1,6 +1,14 @@
 <div class="amp-dc-banner js_dc_banner">
     <div class="amp-dc-banner-pic-wrap">
-        {{> acc-template-banner-image bannerImage.[0]}}
+        {{> acc-template-image-generator
+        image=bannerImage
+        mediaQueries='[
+            {"query": 768, "width": 768, "x1": {}, "x2": { "w": "{$root.layer0.info.src.height*2}", "h": "{$root.layer0.info.src.height*2}"} },
+            {"query": 1024, "width": 1024, "x1": {"w": "{$root.layer0.info.src.width>1024?1024:100%}" ,"h": "100%", "aspect": "16:9"}, "x2": {"w": "{$root.layer0.info.src.width>1024?2048:200%}" ,"h": "200%", "aspect": "16:9"} },
+            {"query": 1025, "width": 1600, "x1": {"w": "{$root.layer0.info.src.width>1024?1600:100%}" ,"h": "100%", "aspect": "16:9"}, "x2": {"w": "{$root.layer0.info.src.width>1024?3200:200%}" ,"h": "200%", "aspect": "16:9"} }
+        ]'
+        classNames='banner'
+        }}
     </div>
     <div class="amp-dc-banner-info-wrap
     {{#if stackMobileLayout}}amp-dc-info-bottom{{/if}}
@@ -13,12 +21,19 @@
                 {{/unless}}
             {{/unless}}
         {{/unless}}"
-         data-align="{{#if alignment}}{{alignment}}{{else}}left{{/if}}"
          style="
-             {{#if textPositionLeft}}left:{{textPositionLeft}}%;{{/if}}
-             {{#if textPositionTop}}top:{{textPositionTop}}%;{{/if}}"
-    >
-        <div class="amp-dc-banner-info" data-opacity="{{bannerOpacity}}" data-color="{{bannerColor}}" style="{{#if textColour}}color: #{{textColour}};{{/if}} {{#if bannerColor}}background: #{{bannerColor}}{{/if}}">
+                left:{{#if textPositionLeft}}{{textPositionLeft}}{{else}}10{{/if}}%;
+                top:{{#if textPositionTop}}{{textPositionTop}}{{else}}40{{/if}}%;
+            ">
+        <div class="amp-dc-banner-info"
+             style="
+             {{#if textColor}}
+                color: {{textColor}};
+             {{/if}}
+             {{#if bannerColor}}
+                background: {{bannerColor}};
+             {{/if}}
+            ">
             {{#if header}}
             <div class="amp-dc-banner-header">{{header}}</div>
             {{/if}}
@@ -30,7 +45,7 @@
             {{/if}}
             {{#if button.label}}
             <a href="{{button.value}}"
-               class="amp-dc-banner-button {{#if style}}{{style}}{{/if}}">{{button.label}}</a>
+               class="amp-dc-banner-button">{{button.label}}</a>
             {{/if}}
         </div>
     </div>

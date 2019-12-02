@@ -1,20 +1,17 @@
 {
   "$schema": "http://bigcontent.io/cms/schema/v1/schema#",
-  "id": "https://unpkg.com/dc-accelerators-content-rendering-service/dist/contentTypes/video.json",
-  "title": "Video Accelerator",
-  "description": "Video Accelerator",
+  "id": "https://unpkg.com/dynamic-content-accelerators/dist/contentTypes/video.json",
+  "title": "Video",
+  "description": "Video accelerator",
   "allOf": [
     {
       "$ref": "http://bigcontent.io/cms/schema/v1/core#/definitions/content"
     }
   ],
-  "propertyOrder": [
-    "video"
-  ],
   "type": "object",
   "properties": {
     "video": {
-      "title": "video",
+      "title": "Video",
       "type": "object",
       "anyOf": [
         {
@@ -22,5 +19,8 @@
         }
       ]
     }
-  }
+  },
+  "propertyOrder": [
+    "video"
+  ]
 }

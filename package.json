@@ -1,7 +1,7 @@
 {
-  "name": "dc-accelerators-content-rendering-service",
+  "name": "dynamic-content-accelerators",
   "version": "4.0.0",
-  "repository": "https://github.com/amplience/dc-accelerators-content-rendering-service",
+  "repository": "https://github.com/amplience/dynamic-content-accelerators",
   "scripts": {
     "build": "gulp buildAll",
     "storybook": "start-storybook -p 6006",
@@ -17,8 +17,8 @@
   "main": "src/",
   "author": "Amplience",
   "dependencies": {
-    "dc-accelerators-content-types": "github:amplience/dc-accelerators-content-types#v2.0.1",
-    "lory.js": "2.2.1"
+    "lory.js": "2.2.1",
+    "poi-js-lib": "git+https://github.com/amplience/poi-js-lib.git#v2.0.0"
   },
   "devDependencies": {
     "@babel/core": "^7.4.5",
@@ -44,15 +44,15 @@
     "gulp-sourcemaps": "2.6.0",
     "gulp-uglify": "3.0.0",
     "gulp-watch": "^5.0.1",
-    "handlebars": "^4.1.2",
+    "handlebars": "^4.5.3",
     "handlebars-helpers": "^0.10.0",
     "jasmine-core": "^2.7.0",
     "karma": "^4.0.1",
     "karma-chrome-launcher": "^2.2.0",
     "karma-jasmine": "^1.1.0",
     "kind-of": "^6.0.2",
-    "lodash": "^4.17.11",
-    "node-sass": "^4.12.0",
+    "lodash": "^4.17.15",
+    "node-sass": "^4.13.0",
     "npm-run-all": "^4.1.5",
     "pump": "1.0.2",
     "sass-loader": "^7.1.0",

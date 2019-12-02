@@ -1,8 +1,8 @@
 {
   "$schema": "http://bigcontent.io/cms/schema/v1/schema#",
-  "id": "https://unpkg.com/dc-accelerators-content-rendering-service/dist/contentTypes/promolist.json",
-  "title": "Promotional List",
-  "description": "Promotional list",
+  "id": "https://unpkg.com/dynamic-content-accelerators/dist/contentTypes/promolist.json",
+  "title": "Promo list",
+  "description": "Promo list accelerator",
   "allOf": [
     {
       "$ref": "http://bigcontent.io/cms/schema/v1/core#/definitions/content"
@@ -10,8 +10,9 @@
   ],
   "type": "object",
   "properties": {
-    "bannerSection": {
+    "promoItems": {
       "type": "array",
+      "title": "Promo list items",
       "items": {
         "allOf": [
           {
@@ -20,9 +21,8 @@
           {
             "properties": {
               "contentType": {
-                "title": "Promo list section",
                 "enum": [
-                  "https://unpkg.com/dc-accelerators-content-rendering-service/dist/contentTypes/promo.json"
+                  "https://unpkg.com/dynamic-content-accelerators/dist/contentTypes/promo.json"
                 ]
               }
             }
@@ -32,5 +32,8 @@
       "minItems": 1,
       "maxItems": 3
     }
-  }
+  },
+  "propertyOrder": [
+    "promoItems"
+  ]
 }
