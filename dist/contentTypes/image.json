@@ -1,6 +1,6 @@
 {
   "$schema": "http://bigcontent.io/cms/schema/v1/schema#",
-  "id": "https://unpkg.com/dc-accelerators-content-rendering-service/dist/contentTypes/image.json",
+  "id": "https://unpkg.com/dynamic-content-accelerators/dist/contentTypes/image.json",
   "title": "Image",
   "description": "Image accelerator",
   "allOf": [
@@ -47,7 +47,7 @@
       "items": {
         "allOf": [
           {
-            "$ref": "https://unpkg.com/dc-accelerators-content-rendering-service/dist/contentTypes/accelerator-partials.json#/definitions/roundel"
+            "$ref": "https://unpkg.com/dynamic-content-accelerators/dist/contentTypes/accelerator-partials.json#/definitions/roundel"
           }
         ]
       }

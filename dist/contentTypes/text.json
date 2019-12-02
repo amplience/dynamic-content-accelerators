@@ -1,6 +1,6 @@
 {
   "$schema": "http://bigcontent.io/cms/schema/v1/schema#",
-  "id": "https://unpkg.com/dc-accelerators-content-rendering-service/dist/contentTypes/text.json",
+  "id": "https://unpkg.com/dynamic-content-accelerators/dist/contentTypes/text.json",
   "title": "Text",
   "description": "Text accelerator",
   "allOf": [
