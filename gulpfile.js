@@ -26,6 +26,16 @@ var replace = function () {
     });
 }
 
+var replaceCompany = function () {
+    return es.map(function (file, cb) {
+        var fileContent = file.contents.toString();
+        fileContent = fileContent.replace(/\{COMPANY_TAG\}/g, toReplace.COMPANY_TAG);
+        file.contents = new Buffer.from(fileContent);
+        // send the updated file down the pipe
+        cb(null, file);
+    });
+};
+
 gulp.task('del', function () {
     return del('dist');
 });
@@ -58,18 +68,6 @@ gulp.task('copy-local-content-types', function () {
         .pipe(gulp.dest('dist/contentTypes'));
 });
 
-gulp.task('copy-accelerators-content-types', function () {
-    return gulp
-        .src([
-            'node_modules/dc-accelerators-content-types/**/*.json',
-            '!**/package.json',
-            '!**/package-lock.json'
-        ])
-        .pipe(replace())
-        .pipe(flatten())
-        .pipe(gulp.dest('dist/contentTypes'));
-});
-
 gulp.task('copy-node-modules', function () {
     return gulp
         .src([
@@ -92,9 +90,11 @@ gulp.task('addLoryLicense', function () {
 gulp.task('build-js', function () {
     return gulp.src([
             'src/**/*.js',
+            'node_modules/poi-js-lib/dist/poi-lib.min.js',
             '!**/*.stories.js'
         ])
         .pipe(concat('utils.js'))
+        .pipe(replaceCompany())
         .pipe(gulp.dest('dist'));
 });
 
@@ -109,7 +109,9 @@ gulp.task('minify-js', function () {
 
 gulp.task('build-css', function () {
     return gulp.src([
-            'src/**/*.scss'
+            'src/**/*.scss',
+            '!src/cardsPreview/cardsPreview.scss',
+            '!src/cardsPreview/localCardsStyles.scss'
         ])
         .pipe(
             sass({
@@ -126,8 +128,30 @@ gulp.task('build-css', function () {
         .pipe(gulp.dest('dist'));
 });
 
+gulp.task('build-cards-css', function () {
+    return gulp.src([
+            'src/cardsPreview/cardsPreview.scss'
+        ])
+        .pipe(
+            sass({
+                outputStyle: 'expanded'
+            }).on('error', sass.logError)
+        )
+        .pipe(
+            autoprefixer({
+                browsers: ['last 2 versions'],
+                cascade: false
+            })
+        )
+        .pipe(concat('cardsStyles.css'))
+        .pipe(gulp.dest('dist'));
+});
+
 gulp.task('minify-css', function () {
-    return gulp.src(['dist/styles.css'])
+    return gulp.src([
+          'dist/styles.css',
+          'dist/cardsStyles.css'
+        ])
         .pipe(cleanCSS())
         .pipe(rename({
             suffix: '.min'
@@ -143,10 +167,10 @@ gulp.task(
         'copy-icons',
         'copy-templates',
         'copy-local-content-types',
-        'copy-accelerators-content-types',
         'addLoryLicense',
         'build-js',
         'minify-js',
+        'build-cards-css',
         'build-css',
         'minify-css'
     ),

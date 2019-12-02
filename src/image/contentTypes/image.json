@@ -1,0 +1,56 @@
+{
+  "$schema": "http://bigcontent.io/cms/schema/v1/schema#",
+  "id": "{CONTENT_TYPE_BASEPATH}/image.json",
+  "title": "Image",
+  "description": "Image accelerator",
+  "allOf": [
+    {
+      "$ref": "http://bigcontent.io/cms/schema/v1/core#/definitions/content"
+    }
+  ],
+  "propertyOrder": [
+    "image",
+    "imageAltText",
+    "seoText",
+    "roundel"
+  ],
+  "type": "object",
+  "properties": {
+    "image": {
+      "title": "Image",
+      "description": "",
+      "type": "object",
+      "anyOf": [
+        {
+          "$ref": "http://bigcontent.io/cms/schema/v1/core#/definitions/image-link"
+        }
+      ]
+    },
+    "imageAltText": {
+      "type": "string",
+      "minLength": 0,
+      "maxLength": 150,
+      "title": "Image alt text"
+    },
+    "seoText": {
+      "type": "string",
+      "minLength": 0,
+      "maxLength": 100,
+      "title": "SEO text",
+      "pattern": "^[\/A-Za-z0-9+_-]+$",
+      "description": "Enter only alphanumeric, _, -, +, / characters"
+    },
+    "roundel": {
+      "title": "Roundels",
+      "type": "array",
+      "maxItems": 5,
+      "items": {
+        "allOf": [
+          {
+            "$ref": "{CONTENT_TYPE_BASEPATH}/accelerator-partials.json#/definitions/roundel"
+          }
+        ]
+      }
+    }
+  }
+}

@@ -15,26 +15,25 @@ export const sampleContent = {
     "name": "accelerator-card-1"
   },
   "cardImage": {
-    "@id": "http://content.cms.amplience.com/ece6b9f2-b58a-4420-937d-a05e9970a459",
-    "@type": "https://dev-solutions.s3.amazonaws.com/DynamicContentTypes/Accelerators/image.json",
+    "@id": "http://content.cms.amplience.com/38476590-9594-4d46-8f5a-c54e293fd094",
     "_meta": {
       "schema": "https://dev-solutions.s3.amazonaws.com/DynamicContentTypes/Accelerators/image.json",
-      "name": "accelerator-image-card-1"
+      "name": "accelerator-image-1"
     },
     "image": {
-      "@id": "http://image.cms.amplience.com/293fae56-2d8f-459e-b375-b65e524d3c69",
+      "@id": "http://image.cms.amplience.com/f46fecc5-945c-451c-879e-5c974a821891",
       "_meta": {
         "schema": "http://bigcontent.io/cms/schema/v1/core#/definitions/image-link"
       },
-      "id": "293fae56-2d8f-459e-b375-b65e524d3c69",
+      "id": "f46fecc5-945c-451c-879e-5c974a821891",
       "name": "pexels-photo-128939",
       "endpoint": "csdemo",
       "defaultHost": "i1.adis.ws",
       "mediaType": "image"
     },
-    "roundel": [],
-    "imageAltText": "alt txt",
-    "seoText": "seo txt"
+    "imageAltText": "pexels-photo-128939",
+    "seoText": "pexels-photo-128939",
+    "@type": "https://dev-solutions.s3.amazonaws.com/DynamicContentTypes/Accelerators/image.json"
   },
   "cardName": "Card 1",
   "link": {

@@ -1,0 +1,63 @@
+{
+  "$schema": "http://bigcontent.io/cms/schema/v1/schema#",
+  "id": "{CONTENT_TYPE_BASEPATH}/blogpost.json",
+  "title": "Blog post",
+  "description": "Blog post accelerator",
+  "allOf": [
+    {
+      "$ref": "http://bigcontent.io/cms/schema/v1/core#/definitions/content"
+    }
+  ],
+  "type": "object",
+  "properties": {
+    "snippet": {
+      "type": "object",
+      "title": "Snippet",
+      "description": "",
+      "allOf": [
+        {
+          "$ref": "{CONTENT_TYPE_BASEPATH}/accelerator-partials.json#/definitions/snippet"
+        }
+      ]
+    },
+    "title": {
+      "type": "string",
+      "minLength": 0,
+      "maxLength": 255,
+      "title": "Title"
+    },
+    "content": {
+      "type": "array",
+      "items": {
+        "allOf": [
+          {
+            "$ref": "http://bigcontent.io/cms/schema/v1/core#/definitions/content-link"
+          },
+          {
+            "properties": {
+              "contentType": {
+                "title": "Content",
+                "enum": [
+                  "{CONTENT_TYPE_BASEPATH}/banner.json",
+                  "{CONTENT_TYPE_BASEPATH}/image.json",
+                  "{CONTENT_TYPE_BASEPATH}/video.json",
+                  "{CONTENT_TYPE_BASEPATH}/text.json",
+                  "{CONTENT_TYPE_BASEPATH}/cardlist.json",
+                  "{CONTENT_TYPE_BASEPATH}/blogpost.json"
+                ]
+              }
+            }
+          }
+        ]
+      },
+      "minItems": 0,
+      "maxItems": 20,
+      "title": "Content"
+    }
+  },
+  "propertyOrder": [
+    "snippet",
+    "title",
+    "content"
+  ]
+}

@@ -1,0 +1,102 @@
+{
+  "$schema": "http://bigcontent.io/cms/schema/v1/schema#",
+  "id": "{CONTENT_TYPE_BASEPATH}/accelerator-partials.json",
+  "title": "Accelerator partials",
+  "description": "Partials",
+  "allOf": [
+    {
+      "$ref": "http://bigcontent.io/cms/schema/v1/core#/definitions/content"
+    }
+  ],
+  "type": "object",
+  "definitions": {
+    "roundel": {
+      "title": "Roundel",
+      "description": "Use this to enter image roundel's details",
+      "type": "object",
+      "properties": {
+        "roundel": {
+          "$ref": "http://bigcontent.io/cms/schema/v1/core#/definitions/image-link",
+          "title": "Roundel image"
+        },
+        "roundelRatio": {
+          "type": "number",
+          "title": "Roundel ratio",
+          "description": "A value between 0 and 1 e.g. 0.6 (default is 0.2)",
+          "minimum": 0,
+          "maximum": 1
+        },
+        "roundelPosition": {
+          "type": "string",
+          "enum": [
+            "Top Left",
+            "Top Right",
+            "Bottom Left",
+            "Bottom Right",
+            "Center"
+          ],
+          "title": "Roundel position",
+          "description": "Roundel position is top left by default"
+        }
+      }
+    },
+    "link": {
+      "title": "Link",
+      "description": "Use this to configure links",
+      "type": "object",
+      "properties": {
+        "label": {
+          "type": "string",
+          "minLength": 0,
+          "maxLength": 255,
+          "title": "Label"
+        },
+        "value": {
+          "type": "string",
+          "minLength": 0,
+          "maxLength": 2000,
+          "title": "Value",
+          "pattern": "^(http:\/\/www.|https:\/\/www.|http:\/\/|https:\/\/)?[a-z0-9]+([-.]{1}[a-z0-9]+)*.[a-z]{2,5}(:[0-9]{1,5})?(/.*)?$",
+          "description": "Enter an absolute URL"
+        }
+      }
+    },
+    "snippet": {
+      "title": "Snippet",
+      "description": "Use this to add snippets to the blog post",
+      "type": "object",
+      "properties": {
+        "image": {
+          "description": "",
+          "type": "object",
+          "allOf": [
+            {
+              "$ref": "{CONTENT_TYPE_BASEPATH}/image.json"
+            }
+          ],
+          "title": "Image"
+        },
+        "title": {
+          "type": "string",
+          "minLength": 0,
+          "maxLength": 255,
+          "title": "Title"
+        },
+        "description": {
+          "type": "string",
+          "minLength": 0,
+          "maxLength": 500,
+          "title": "Description"
+        },
+        "cta": {
+          "type": "object",
+          "allOf": [
+            {
+              "$ref": "#/definitions/link"
+            }
+          ]
+        }
+      }
+    }
+  }
+}

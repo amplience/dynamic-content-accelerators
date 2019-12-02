@@ -1,16 +1,12 @@
 {
   "$schema": "http://bigcontent.io/cms/schema/v1/schema#",
-  "id": "https://unpkg.com/dc-accelerators-content-rendering-service/dist/contentTypes/splitblock.json",
-  "title": "Split Block Accelerators",
-  "description": "Split Block Accelerator",
+  "id": "https://unpkg.com/dynamic-content-accelerators/dist/contentTypes/splitblock.json",
+  "title": "Split block",
+  "description": "Split block accelerator",
   "allOf": [
     {
       "$ref": "http://bigcontent.io/cms/schema/v1/core#/definitions/content"
     }
-  ],
-  "propertyOrder": [
-    "content",
-    "split"
   ],
   "type": "object",
   "properties": {
@@ -24,11 +20,10 @@
           {
             "properties": {
               "contentType": {
-                "title": "content",
                 "enum": [
-                  "https://unpkg.com/dc-accelerators-content-rendering-service/dist/contentTypes/image.json",
-                  "https://unpkg.com/dc-accelerators-content-rendering-service/dist/contentTypes/video.json",
-                  "https://unpkg.com/dc-accelerators-content-rendering-service/dist/contentTypes/text.json"
+                  "https://unpkg.com/dynamic-content-accelerators/dist/contentTypes/image.json",
+                  "https://unpkg.com/dynamic-content-accelerators/dist/contentTypes/video.json",
+                  "https://unpkg.com/dynamic-content-accelerators/dist/contentTypes/text.json"
                 ]
               }
             }
@@ -37,8 +32,7 @@
       },
       "minItems": 2,
       "maxItems": 2,
-      "title": "Content",
-      "description": ""
+      "title": "Content"
     },
     "split": {
       "type": "string",
@@ -47,10 +41,13 @@
         "70/30",
         "30/70"
       ],
-      "title": "Split Ratio",
-      "description": ""
+      "title": "Split ratio"
     }
   },
+  "propertyOrder": [
+    "content",
+    "split"
+  ],
   "required": [
     "split"
   ]

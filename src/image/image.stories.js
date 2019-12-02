@@ -18,13 +18,25 @@ export const sampleContent = {
       "schema": "http://bigcontent.io/cms/schema/v1/core#/definitions/image-link"
     },
     "id": "f46fecc5-945c-451c-879e-5c974a821891",
-    "name": "blue-and-pink",
-    "endpoint": "csdemo",
+    "name": "textwireframe",
+    "endpoint": "solutions",
     "defaultHost": "i1.adis.ws",
     "mediaType": "image"
   },
-  "imageAltText": "lady in red",
-  "seoText": "lady in red",
+  "roundel": [{
+    "roundel": {
+      "id": "cad6cb31-1936-4193-82de-1844a1235c91",
+      "name": "shutterstock_151174712",
+      "endpoint": "solutions",
+      "defaultHost": "i1.adis.ws",
+      "mediaType": "image",
+      "_meta": {
+        "schema": "http://bigcontent.io/cms/schema/v1/core#/definitions/image-link"
+      }
+    }
+  }],
+  "imageAltText": "pexels-photo-128939",
+  "seoText": "pexels-photo-128939",
   "@type": "https://dev-solutions.s3.amazonaws.com/DynamicContentTypes/Accelerators/image.json"
 };
 

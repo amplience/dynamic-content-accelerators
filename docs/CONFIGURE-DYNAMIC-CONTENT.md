@@ -54,7 +54,7 @@ Recommended Steps:
 
 7. Choose an icon / copy icon URL from the recommended values below
 
-8. Choose a card / copy settings from the recommended values below
+8. Add card URL: ```https://{{vse.domain}}/v1/content/demo/content-item/{{content.sys.id}}?template=acc-template-cardsPreview```
 
 ![Configure Card](../media/configure-card.jpeg)
 
@@ -68,144 +68,62 @@ Recommended Steps:
 - ###### Icon
 	`https://dev-solutions.s3.amazonaws.com/DynamicContentTypes/Accelerators/icons/icon-imagewithroundel.png`
 
-- ###### Card
-	Choose the gallery card. The pointers you need to add for the card are:
-	- headline: /roundelPosition
-	- image0: /roundel
-
 ##### Link
 - ###### Icon
 	`https://dev-solutions.s3.amazonaws.com/DynamicContentTypes/Accelerators/icons/icon-link.png`
-
-- ###### Card
-	Choose the text card. The pointer you need to add for the card is:
-	- headline: /label
 
 ##### Image
 - ###### Icon
 	`https://dev-solutions.s3.amazonaws.com/DynamicContentTypes/Accelerators/icons/icon-image.png`
 
-- ###### Card
-	Choose the photo card. The pointers you need to add for the card are:
-	- image: /image
-	- imageAlt: /imageAltText
-
 ##### Text
 - ###### Icon
 	`https://dev-solutions.s3.amazonaws.com/DynamicContentTypes/Accelerators/icons/icon-text.png`
-
-- ###### Card
-	Choose the text card. The pointer you need to add for the card is:
-	- headline: /text
 
 ##### Video
 - ###### Icon
 	`https://dev-solutions.s3.amazonaws.com/DynamicContentTypes/Accelerators/icons/icon-video.png`
 
-- ###### Card
-	Choose the gallery card. The pointers you need to add for the card are:
-	- headline: /_title
-	- image0: /video
-
 ##### Card
 - ###### Icon
 	`https://dev-solutions.s3.amazonaws.com/DynamicContentTypes/Accelerators/icons/icon-card.png`
-
-- ###### Card
-	Choose the gallery card. The pointers you need to add for the card are:
-	- headline: /cardName
-	- image0: /cardImage/image
 
 ##### Card list
 - ###### Icon
 	`https://dev-solutions.s3.amazonaws.com/DynamicContentTypes/Accelerators/icons/icon-cardlist.png`
 
-- ###### Card
-	Choose the gallery card. The pointers you need to add for the card are:
-	- headline: /header
-	- image0: /cards/0/cardImage/image	
-	- image1: /cards/1/cardImage/image
-	- image2: /cards/2/cardImage/image
-	- image3: /cards/3/cardImage/image
-
 ##### Banner
 - ###### Icon
 	`https://dev-solutions.s3.amazonaws.com/DynamicContentTypes/Accelerators/icons/icon-banner.png`
-
-- ###### Card
-	Choose the gallery card. The pointers you need to add for the card are:
-	- headline: /header
-	- image0: /bannerImage/0/image
 	
 ##### Slider
 - ###### Icon
 	`https://dev-solutions.s3.amazonaws.com/DynamicContentTypes/Accelerators/icons/icon-slider.png`
 
-- ###### Card
-	Choose the gallery card. Examples of the pointers you need to add for the card are:
-	- headline: /_title
-	- image0: /slides/0/bannerImage/0/image
-	- image1: /slides/1/bannerImage/0/image
-	- image2: /slides/2/bannerImage/0/image	- image3: /slides/3/bannerImage/0/image
-
 ##### Split block
 - ###### Icon
 	`https://dev-solutions.s3.amazonaws.com/DynamicContentTypes/Accelerators/icons/icon-splitblock.png`
-
-- ###### Card
-	Choose the gallery card. Examples of pointers you need to add for the card are:
-	- headline: /content/0/text
-	- image0: /content/0/image
-	- image1: /content/1/image
-	- image2: /content/0/video
-	- image3: /content/1/video
 	
 ##### Promo
 - ###### Icon
 	`https://dev-solutions.s3.amazonaws.com/DynamicContentTypes/Accelerators/icons/icon-promobannersection.png`
 
-- ###### Card
-	Choose the gallery card. The pointers you need to add for the card are:
-	- headline: /_title
-	- image0: /icon
-
 ##### Promo List
 - ###### Icon
 	`https://dev-solutions.s3.amazonaws.com/DynamicContentTypes/Accelerators/icons/icon-promobanner.png`
-
-- ###### Card
-	Choose the gallery card. The pointers you need to add for the card are:
-	- headline: /_title
-	- image0: /bannerSection/0/icon
-	- image1: /bannerSection/1/icon
-	- image2: /bannerSection/2/icon
 
 ##### External block
 
 - ###### Icon
 	`https://dev-solutions.s3.amazonaws.com/DynamicContentTypes/Accelerators/icons/icon-externalblock.png`
 
-- ###### Card
-	Choose the text card. The pointer you need to add for the card is:
-	- headline: /external
-
 ##### Snippet
 - ###### Icon
 	`https://dev-solutions.s3.amazonaws.com/DynamicContentTypes/Accelerators/icons/icon-blogsnippet.png`
 
-- ###### Card
-	Choose the gallery card. The pointers you need to add for the card are:
-	- headline: /title
-	- image0: /image/image
-
 ##### Blog Post
 - ###### Icon
 	`https://dev-solutions.s3.amazonaws.com/DynamicContentTypes/Accelerators/icons/icon-blogpost.png`
-
-- ###### Card
-	Choose the gallery card. The pointers you need to add for the card are:
-	- headline: /title
-	- image0: /snippet/image/image
 
 ##### Page
 - ###### Icon
@@ -238,10 +156,9 @@ Below is a list of transformation templates required by the accelerator componen
 
 | friendly name  | name           | parameters                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         |
 |----------------|----------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| roundel        | roundel        | ``` myasset=empty&p1_img=empty&p2_img=empty&p3_img=empty&p4_img=empty&p5_img=empty&qlt=90&roundelRatio=1&layer0=[src=/i//{$prod_img}&w=1350]&layer1=[src=/i//{$p1_img}&w={376*$roundelRatio}&right=10&bottom=10&anchor=BR&visible={$p1_img!=$myasset}]&layer2=[src=/i//{$p2_img}&w={376*$roundelRatio}&left=10&bottom=10&anchor=BL&visible={$p2_img!=$myasset}]&layer3=[src=/i//{$p3_img}&w={376*$roundelRatio}&left=10&top=10&anchor=TL&visible={$p3_img!=$myasset}]&layer4=[src=/i//{$p4_img}&w={376*$roundelRatio}&right=10&top=10&anchor=TR&visible={$p4_img!=$myasset}]&layer5=[src=/i//{$p5_img}&w={376*$roundelRatio}&right={$root.layer0.info.canvas.width/2-376*$roundelRatio/2}&top={$root.layer0.info.canvas.height/2-376*$roundelRatio/2}&anchor=TR&visible={$p5_img!=$myasset}] ```                                                                                                                                                                                                                                                                                                   |
+| roundel        | roundel        | ``` myasset=empty&p1_img=empty&p2_img=empty&p3_img=empty&p4_img=empty&p5_img=empty&qlt=90&roundelRatio1=1&roundelRatio2=1&roundelRatio3=1&roundelRatio4=1&roundelRatio5=1&layer1=[src=/i//{$p1_img}&w={$root.layer0.info.canvas.width*$roundelRatio1}&left={$root.layer0.info.canvas.width-10}&bottom=10&anchor=BR&visible={$p1_img!=$myasset}]&layer2=[src=/i//{$p2_img}&w={$root.layer0.info.canvas.width*$roundelRatio2}&left=10&bottom=10&anchor=BL&visible={$p2_img!=$myasset}]&layer3=[src=/i//{$p3_img}&w={$root.layer0.info.canvas.width*$roundelRatio3}&left=10&top=10&anchor=TL&visible={$p3_img!=$myasset}]&layer4=[src=/i//{$p4_img}&w={$root.layer0.info.canvas.width*$roundelRatio4}&left={$root.layer0.info.canvas.width-10}&top=10&anchor=TR&visible={$p4_img!=$myasset}]&layer5=[src=/i//{$p5_img}&w={$root.layer0.info.canvas.width*$roundelRatio5}&right={$root.layer0.info.canvas.width/2}&top={$root.layer0.info.canvas.height/2}&anchor=MC&visible={$p5_img!=$myasset}]```                                                                                                    |
 | poi            | poi            | ``` scaleFit=poi&poi={$this.metadata.pointOfInterest.x},{$this.metadata.pointOfInterest.y},{$this.metadata.pointOfInterest.w},{$this.metadata.pointOfInterest.h} ```                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               |
-| banner-roundel | banner-roundel | ``` myasset=empty&p1_img=empty&p2_img=empty&p3_img=empty&p4_img=empty&p5_img=empty&qlt=90&roundelRatio1=1&roundelRatio2=1&roundelRatio3=1&roundelRatio4=1&roundelRatio5=1&layer1=[src=/i//{$p1_img}&w={$root.layer0.info.canvas.width*$roundelRatio1}&left={$root.layer0.info.canvas.width-10}&bottom=10&anchor=BR&visible={$p1_img!=$myasset}]&layer2=[src=/i//{$p2_img}&w={$root.layer0.info.canvas.width*$roundelRatio2}&left=10&bottom=10&anchor=BL&visible={$p2_img!=$myasset}]&layer3=[src=/i//{$p3_img}&w={$root.layer0.info.canvas.width*$roundelRatio3}&left=10&top=10&anchor=TL&visible={$p3_img!=$myasset}]&layer4=[src=/i//{$p4_img}&w={$root.layer0.info.canvas.width*$roundelRatio4}&left={$root.layer0.info.canvas.width-10}&top=10&anchor=TR&visible={$p4_img!=$myasset}]?&layer5=[src=/i//{$p5_img}&w={$root.layer0.info.canvas.width*$roundelRatio5}&right={$root.layer0.info.canvas.width/2-$root.layer0.info.canvas.width*$roundelRatio5/2}&top={$root.layer0.info.canvas.height/2-$root.layer0.info.canvas.width*$roundelRatio5/2}&anchor=TR&visible={$p5_img!=$myasset}] ``` |
-| banner-poi     | banner-poi     | ``` layer0=[scaleFit=poi&poi={$this.metadata.pointOfInterest.x},{$this.metadata.pointOfInterest.y},{$this.metadata.pointOfInterest.w},{$this.metadata.pointOfInterest.h}&sm=c&aspect=1:1&w=768&h=768] ```                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          |
+| banner-poi     | banner-poi     | ``` layer0=[scaleFit=poi&poi={$this.metadata.pointOfInterest.x?$this.metadata.pointOfInterest.x:0.36},{$this.metadata.pointOfInterest.y?$this.metadata.pointOfInterest.y:0.5},{$this.metadata.pointOfInterest.w?$this.metadata.pointOfInterest.w:0.26},{$this.metadata.pointOfInterest.h?$this.metadata.pointOfInterest.h:0.125}&sm=c&aspect=1:1&w={$this.metadata.image.height>768?768:$this.metadata.image.height}&h={$this.metadata.image.height>768?768:$this.metadata.image.height}]] ```                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          |
 
 ### Steps:
 

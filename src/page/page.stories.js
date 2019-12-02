@@ -35,10 +35,10 @@ export const sampleContent = {
             },
             "value": "http://dev-solutions.s3.amazonaws.com/dc-demo-site/dist/productlist/index.html?c=f49907fd-99df-4446-85b7-4c3235aac82a&s=e6bdb253-db3c-4458-b5cc-0d90aa02e114"
           },
-          "backgroundColour": "000000",
+          "backgroundColor": "rgb(0,0,0)",
           "bottomLine": "hurry ends in 3 days",
-          "bottomlineColour": "ffffff",
-          "toplineColour": "ffffff"
+          "bottomlineColor": "rgb(255,255,255)",
+          "toplineColor": "rgb(255,255,255)"
         },
         {
           "@id": "http://content.cms.amplience.com/90e694ec-a761-4c32-8581-b6c14ea37690",
@@ -54,10 +54,10 @@ export const sampleContent = {
             },
             "value": "http://dev-solutions.s3.amazonaws.com/dc-demo-site/dist/productlist/index.html?c=f49907fd-99df-4446-85b7-4c3235aac82a&s=e6bdb253-db3c-4458-b5cc-0d90aa02e114"
           },
-          "backgroundColour": "ffffff",
+          "backgroundColor": "rgb(255,255,255)",
           "bottomLine": "t&c's apply, code: wrapup",
-          "bottomlineColour": "000000",
-          "toplineColour": "000000"
+          "bottomlineColor": "rgb(0,0,0)",
+          "toplineColor": "rgb(0,0,0)"
         },
         {
           "@id": "http://content.cms.amplience.com/da807558-e551-4ed1-a73a-3530a24abc6b",
@@ -73,9 +73,9 @@ export const sampleContent = {
             },
             "value": "http://dev-solutions.s3.amazonaws.com/dc-demo-site/dist/productlist/index.html?c=f49907fd-99df-4446-85b7-4c3235aac82a&s=e6bdb253-db3c-4458-b5cc-0d90aa02e114"
           },
-          "backgroundColour": "d3d3d3",
+          "backgroundColor":"rgb(211,211,211)",
           "bottomLine": "excludes sale. t&c's apply",
-          "toplineColour": "000000"
+          "toplineColor": "rgb(0,0,0)"
         }
       ]
     },
@@ -100,7 +100,7 @@ export const sampleContent = {
             },
             "value": "http://dev-solutions.s3.amazonaws.com/dc-demo-site/dist/blog/index.html?c=54db7a18-1768-400f-8e96-bbd2e35e4b9c&s=e6bdb253-db3c-4458-b5cc-0d90aa02e114"
           },
-          "bannerImage": [{
+          "bannerImage": {
             "@id": "http://content.cms.amplience.com/38476590-9594-4d46-8f5a-c54e293fd094",
             "@type": "https://dev-solutions.s3.amazonaws.com/DynamicContentTypes/Accelerators/image.json",
             "_meta": {
@@ -119,15 +119,15 @@ export const sampleContent = {
               "mediaType": "image"
             },
             "imageAltText": "lady in red",
-            "seoText": "lady in red"
-          }],
+            "seoText": "lady-in-red"
+          },
           "textPositionLeft": "55",
-          "textColour": "ffffff",
+          "textColor": "rgb(255,255,255)",
           "header": "Pretty in Pink",
           "description": "Exploring Spring & Summer Looks in London",
           "stackMobileLayout": true,
           "style": "black",
-          "bannerColor": "000000",
+          "bannerColor": "rgb(0,0,0)",
           "bannerOpacity": 0.5
         },
         {
@@ -145,7 +145,7 @@ export const sampleContent = {
             }
           },
           "textPositionTop": "5",
-          "bannerImage": [{
+          "bannerImage": {
             "@id": "http://content.cms.amplience.com/518a5161-b9de-432b-bab7-022557b7e01d",
             "@type": "https://dev-solutions.s3.amazonaws.com/DynamicContentTypes/Accelerators/image.json",
             "_meta": {
@@ -165,9 +165,9 @@ export const sampleContent = {
             },
             "imageAltText": "3 new year banner!!",
             "seoText": "3-new-year-banner"
-          }],
+          },
           "textPositionLeft": "20",
-          "textColour": "000000",
+          "textColor": "rgb(0,0,0)",
           "header": "3 LOOKS FOR EASTER!",
           "description": "3 ways to look great this Easter",
           "stackMobileLayout": true,
@@ -189,7 +189,7 @@ export const sampleContent = {
             }
           },
           "textPositionTop": "0",
-          "bannerImage": [{
+          "bannerImage": {
             "@id": "http://content.cms.amplience.com/eaa840ac-c4e9-4b55-8435-5a42afeca9aa",
             "@type": "https://dev-solutions.s3.amazonaws.com/DynamicContentTypes/Accelerators/image.json",
             "_meta": {
@@ -207,14 +207,14 @@ export const sampleContent = {
               "defaultHost": "i1.adis.ws",
               "mediaType": "image"
             }
-          }],
+          },
           "textPositionLeft": "15",
-          "textColour": "ffffff",
+          "textColor": "rgb(255,255,255)",
           "header": "HEAD TO TOE IN BLACK SALE",
           "description": "What is the best way to wear all black?",
           "stackMobileLayout": true,
           "style": "white",
-          "bannerColor": "#00000",
+          "bannerColor": "rgb(0,0,0)",
           "bannerOpacity": 0.6
         }
       ],
@@ -242,8 +242,8 @@ export const sampleContent = {
           },
           "value": "http://dev-solutions.s3.amazonaws.com/dc-demo-site/dist/productlist/index.html?c=f49907fd-99df-4446-85b7-4c3235aac82a&s=e6bdb253-db3c-4458-b5cc-0d90aa02e114"
         },
-        "backgroundColour": "d3d3d3",
-        "toplineColour": "000000"
+        "backgroundColor": "rgb(211,211,211)",
+        "toplineColor": "rgb(0,0,0)"
       }]
     },
     {
@@ -262,23 +262,25 @@ export const sampleContent = {
             "name": "accelerator-card-1"
           },
           "cardImage": {
-            "@id": "http://content.cms.amplience.com/bdcf5474-c3eb-4c1e-a582-a186bf4df1bd",
-            "@type": "https://dev-solutions.s3.amazonaws.com/DynamicContentTypes/Accelerators/image.json",
+            "@id": "http://content.cms.amplience.com/38476590-9594-4d46-8f5a-c54e293fd094",
             "_meta": {
               "schema": "https://dev-solutions.s3.amazonaws.com/DynamicContentTypes/Accelerators/image.json",
-              "name": "shop-card-image"
+              "name": "accelerator-image-1"
             },
             "image": {
-              "@id": "http://image.cms.amplience.com/054c070d-0943-4bd4-aa48-c40fefe9b9c3",
+              "@id": "http://image.cms.amplience.com/f46fecc5-945c-451c-879e-5c974a821891",
               "_meta": {
                 "schema": "http://bigcontent.io/cms/schema/v1/core#/definitions/image-link"
               },
-              "id": "054c070d-0943-4bd4-aa48-c40fefe9b9c3",
+              "id": "f46fecc5-945c-451c-879e-5c974a821891",
               "name": "Fashion_Womens_Collection_SS",
               "endpoint": "csdemo",
               "defaultHost": "i1.adis.ws",
               "mediaType": "image"
-            }
+            },
+            "imageAltText": "Fashion_Womens_Collection_SS",
+            "seoText": "Fashion_Womens_Collection_SS",
+            "@type": "https://dev-solutions.s3.amazonaws.com/DynamicContentTypes/Accelerators/image.json"
           },
           "cardName": "Women Fashion",
           "link": {
@@ -298,26 +300,28 @@ export const sampleContent = {
             "name": "accelerator-card-2"
           },
           "cardImage": {
-            "@id": "http://content.cms.amplience.com/927beb58-9ef3-4b81-9864-5a666dc6e762",
-            "@type": "https://dev-solutions.s3.amazonaws.com/DynamicContentTypes/Accelerators/image.json",
+            "@id": "http://content.cms.amplience.com/38476590-9594-4d46-8f5a-c54e293fd094",
             "_meta": {
               "schema": "https://dev-solutions.s3.amazonaws.com/DynamicContentTypes/Accelerators/image.json",
-              "name": "accelerator-image-for-card-2"
+              "name": "accelerator-image-1"
             },
             "image": {
-              "@id": "http://image.cms.amplience.com/e4bd0dcb-e6b0-4cda-b7fd-857ae42cf87e",
+              "@id": "http://image.cms.amplience.com/f46fecc5-945c-451c-879e-5c974a821891",
               "_meta": {
                 "schema": "http://bigcontent.io/cms/schema/v1/core#/definitions/image-link"
               },
-              "id": "e4bd0dcb-e6b0-4cda-b7fd-857ae42cf87e",
+              "id": "f46fecc5-945c-451c-879e-5c974a821891",
               "name": "shopthelook copy",
               "endpoint": "csdemo",
               "defaultHost": "i1.adis.ws",
               "mediaType": "image"
-            }
+            },
+            "imageAltText": "shopthelook copy",
+            "seoText": "shopthelook-copy",
+            "@type": "https://dev-solutions.s3.amazonaws.com/DynamicContentTypes/Accelerators/image.json"
           },
           "cardName": "Shop The Look",
-          "textBackgroundColour": "cccccc",
+          "textBackgroundColor": "rgb(204,204,204)",
           "link": {
             "label": "Find products as you see them",
             "value": "http://dev-solutions.s3.amazonaws.com/ca-demo-site/dist/shop-the-look/index.html",
@@ -335,23 +339,25 @@ export const sampleContent = {
             "name": "accelerator-card-3"
           },
           "cardImage": {
-            "@id": "http://content.cms.amplience.com/c22872d2-d3b6-4884-89b9-41438073babb",
-            "@type": "https://dev-solutions.s3.amazonaws.com/DynamicContentTypes/Accelerators/image.json",
+            "@id": "http://content.cms.amplience.com/38476590-9594-4d46-8f5a-c54e293fd094",
             "_meta": {
               "schema": "https://dev-solutions.s3.amazonaws.com/DynamicContentTypes/Accelerators/image.json",
-              "name": "accelerator-image-for-card-3"
+              "name": "accelerator-image-1"
             },
             "image": {
-              "@id": "http://image.cms.amplience.com/5de21dbd-99ee-4e3b-9c0d-16eb64c68c77",
+              "@id": "http://image.cms.amplience.com/f46fecc5-945c-451c-879e-5c974a821891",
               "_meta": {
                 "schema": "http://bigcontent.io/cms/schema/v1/core#/definitions/image-link"
               },
-              "id": "5de21dbd-99ee-4e3b-9c0d-16eb64c68c77",
+              "id": "f46fecc5-945c-451c-879e-5c974a821891",
               "name": "onlineCatalogue copy",
               "endpoint": "csdemo",
               "defaultHost": "i1.adis.ws",
               "mediaType": "image"
-            }
+            },
+            "imageAltText": "onlineCatalogue copy",
+            "seoText": "onlineCatalogue-copy",
+            "@type": "https://dev-solutions.s3.amazonaws.com/DynamicContentTypes/Accelerators/image.json"
           },
           "cardName": "Online Catalogue",
           "link": {
@@ -371,26 +377,28 @@ export const sampleContent = {
             "name": "accelerator-card-4"
           },
           "cardImage": {
-            "@id": "http://content.cms.amplience.com/6d10dd9e-a9d2-4d26-8427-abea31bbbcee",
-            "@type": "https://dev-solutions.s3.amazonaws.com/DynamicContentTypes/Accelerators/image.json",
+            "@id": "http://content.cms.amplience.com/38476590-9594-4d46-8f5a-c54e293fd094",
             "_meta": {
               "schema": "https://dev-solutions.s3.amazonaws.com/DynamicContentTypes/Accelerators/image.json",
-              "name": "accelerator-image-for-card-4"
+              "name": "accelerator-image-1"
             },
             "image": {
-              "@id": "http://image.cms.amplience.com/77eb6cf8-ce22-4548-9822-56f160718a64",
+              "@id": "http://image.cms.amplience.com/f46fecc5-945c-451c-879e-5c974a821891",
               "_meta": {
                 "schema": "http://bigcontent.io/cms/schema/v1/core#/definitions/image-link"
               },
-              "id": "77eb6cf8-ce22-4548-9822-56f160718a64",
+              "id": "f46fecc5-945c-451c-879e-5c974a821891",
               "name": "blog_1",
               "endpoint": "csdemo",
               "defaultHost": "i1.adis.ws",
               "mediaType": "image"
-            }
+            },
+            "imageAltText": "blog_1",
+            "seoText": "blog_1",
+            "@type": "https://dev-solutions.s3.amazonaws.com/DynamicContentTypes/Accelerators/image.json"
           },
           "cardName": "Blog",
-          "textBackgroundColour": "d3d3d3",
+          "textBackgroundColor": "rgb(211,211,211)",
           "link": {
             "label": "Visit Blog",
             "value": "http://dev-solutions.s3.amazonaws.com/ca-demo-site/dist/bloglist/index.html?s=e6bdb253-db3c-4458-b5cc-0d90aa02e114&c=54db7a18-1768-400f-8e96-bbd2e35e4b9c",
@@ -494,23 +502,25 @@ export const sampleContent = {
             "name": "accelerator-card-2-for-cardlist2"
           },
           "cardImage": {
-            "@id": "http://content.cms.amplience.com/21d560fb-198e-4c00-a620-5d480c5f8932",
-            "@type": "https://dev-solutions.s3.amazonaws.com/DynamicContentTypes/Accelerators/image.json",
+            "@id": "http://content.cms.amplience.com/38476590-9594-4d46-8f5a-c54e293fd094",
             "_meta": {
               "schema": "https://dev-solutions.s3.amazonaws.com/DynamicContentTypes/Accelerators/image.json",
-              "name": "accelerator-image-2-for-card2"
+              "name": "accelerator-image-1"
             },
             "image": {
-              "@id": "http://image.cms.amplience.com/d998a6d0-276d-4061-a482-b0b7ce2ef3f9",
+              "@id": "http://image.cms.amplience.com/f46fecc5-945c-451c-879e-5c974a821891",
               "_meta": {
                 "schema": "http://bigcontent.io/cms/schema/v1/core#/definitions/image-link"
               },
-              "id": "d998a6d0-276d-4061-a482-b0b7ce2ef3f9",
+              "id": "f46fecc5-945c-451c-879e-5c974a821891",
               "name": "shutterstock_167805908",
               "endpoint": "csdemo",
               "defaultHost": "i1.adis.ws",
               "mediaType": "image"
-            }
+            },
+            "imageAltText": "shutterstock_167805908",
+            "seoText": "shutterstock_167805908",
+            "@type": "https://dev-solutions.s3.amazonaws.com/DynamicContentTypes/Accelerators/image.json"
           },
           "link": {
             "value": "http://dev-solutions.s3.amazonaws.com/ca-demo-site/dist/productlist/index.html?c=ea3fdefd-298f-4891-b6f6-31de9a0788b0&s=53251bf8-98b5-4699-9b03-8cac225de5ff",
@@ -528,23 +538,25 @@ export const sampleContent = {
             "name": "accelerator-card-1-for-cardlist2"
           },
           "cardImage": {
-            "@id": "http://content.cms.amplience.com/be803f40-7362-40b6-8231-fcf7354e3e54",
-            "@type": "https://dev-solutions.s3.amazonaws.com/DynamicContentTypes/Accelerators/image.json",
+            "@id": "http://content.cms.amplience.com/38476590-9594-4d46-8f5a-c54e293fd094",
             "_meta": {
               "schema": "https://dev-solutions.s3.amazonaws.com/DynamicContentTypes/Accelerators/image.json",
-              "name": "accelerator-image-for-cardlist2"
+              "name": "accelerator-image-1"
             },
             "image": {
-              "@id": "http://image.cms.amplience.com/f3c78d66-ca8a-4834-82a8-44ed93c08ecc",
+              "@id": "http://image.cms.amplience.com/f46fecc5-945c-451c-879e-5c974a821891",
               "_meta": {
                 "schema": "http://bigcontent.io/cms/schema/v1/core#/definitions/image-link"
               },
-              "id": "f3c78d66-ca8a-4834-82a8-44ed93c08ecc",
+              "id": "f46fecc5-945c-451c-879e-5c974a821891",
               "name": "shutterstock_151174712",
               "endpoint": "csdemo",
               "defaultHost": "i1.adis.ws",
               "mediaType": "image"
-            }
+            },
+            "imageAltText": "shutterstock_151174712",
+            "seoText": "shutterstock_151174712",
+            "@type": "https://dev-solutions.s3.amazonaws.com/DynamicContentTypes/Accelerators/image.json"
           },
           "link": {
             "value": "http://dev-solutions.s3.amazonaws.com/dc-demo-site/dist/productlist/index.html?c=ea3fdefd-298f-4891-b6f6-31de9a0788b0&s=e6bdb253-db3c-4458-b5cc-0d90aa02e114",
@@ -596,7 +608,7 @@ export const sampleContent = {
       ]
     }
   ],
-  "@type": "https://unpkg.com/dc-accelerators-content-rendering-service/dist/contentTypes/page.json"
+  "@type": "https://unpkg.com/dynamic-content-accelerators/dist/contentTypes/page.json"
 };
 
 storiesOf('Page', module)

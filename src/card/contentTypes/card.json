@@ -1,0 +1,50 @@
+{
+  "$schema": "http://bigcontent.io/cms/schema/v1/schema#",
+  "id": "{CONTENT_TYPE_BASEPATH}/card.json",
+  "title": "Card",
+  "description": "Card accelerator",
+  "allOf": [
+    {
+      "$ref": "http://bigcontent.io/cms/schema/v1/core#/definitions/content"
+    }
+  ],
+  "type": "object",
+  "properties": {
+    "cardImage": {
+      "description": "",
+      "type": "object",
+      "allOf": [
+        {
+          "$ref": "{CONTENT_TYPE_BASEPATH}/image.json"
+        }
+      ],
+      "title": "Card image"
+    },
+    "cardName": {
+      "type": "string",
+      "minLength": 0,
+      "maxLength": 150,
+      "title": "Card name"
+    },
+    "description": {
+      "type": "string",
+      "minLength": 0,
+      "maxLength": 200,
+      "title": "Description"
+    },
+    "link": {
+      "type": "object",
+      "allOf": [
+        {
+          "$ref": "{CONTENT_TYPE_BASEPATH}/accelerator-partials.json#/definitions/link"
+        }
+      ]
+    }
+  },
+  "propertyOrder": [
+    "cardImage",
+    "cardName",
+    "description",
+    "link"
+  ]
+}

@@ -1,0 +1,18 @@
+<div class="amp-dc-slider js_slider" data-infinite="true" data-autoplay="true" data-navigation="{{navigationDots}}">
+    <div class="amp-dc-slider-frame js_frame">
+        <ul class="amp-dc-slider-slides js_slides">
+            {{#each slides}}
+            <li class="amp-dc-slider-slide js_dc_slide">
+                {{> cardsTemplateChooser this}}
+            </li>
+            {{/each}}
+        </ul>
+        {{#if navigationDots}}
+        <ul class="amp-dc-dots">
+            {{#each slides}}
+            <li class="amp-dc-dot js_dc_slider_dot"></li>
+            {{/each}}
+        </ul>
+        {{/if}}
+    </div>
+</div>

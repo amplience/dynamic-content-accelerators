@@ -1,19 +1,12 @@
 {
   "$schema": "http://bigcontent.io/cms/schema/v1/schema#",
-  "id": "https://unpkg.com/dc-accelerators-content-rendering-service/dist/contentTypes/slider.json",
-  "title": "Slider Accelerator",
-  "description": "Slider Accelerator",
+  "id": "https://unpkg.com/dynamic-content-accelerators/dist/contentTypes/slider.json",
+  "title": "Slider",
+  "description": "Slider accelerator",
   "allOf": [
     {
       "$ref": "http://bigcontent.io/cms/schema/v1/core#/definitions/content"
     }
-  ],
-  "propertyOrder": [
-    "slides",
-    "loadingColour",
-    "loadingPosition",
-    "loop",
-    "navigationDots"
   ],
   "type": "object",
   "properties": {
@@ -27,11 +20,10 @@
           {
             "properties": {
               "contentType": {
-                "title": "slides",
                 "enum": [
-                  "https://unpkg.com/dc-accelerators-content-rendering-service/dist/contentTypes/banner.json",
-                  "https://unpkg.com/dc-accelerators-content-rendering-service/dist/contentTypes/image.json",
-                  "https://unpkg.com/dc-accelerators-content-rendering-service/dist/contentTypes/video.json"
+                  "https://unpkg.com/dynamic-content-accelerators/dist/contentTypes/banner.json",
+                  "https://unpkg.com/dynamic-content-accelerators/dist/contentTypes/image.json",
+                  "https://unpkg.com/dynamic-content-accelerators/dist/contentTypes/video.json"
                 ]
               }
             }
@@ -39,19 +31,21 @@
         ]
       },
       "title": "Slides",
-      "description": "",
       "minItems": 1,
       "maxItems": 8
     },
     "loop": {
       "type": "boolean",
-      "title": "Loop slider",
-      "description": ""
+      "title": "Loop slider"
     },
     "navigationDots": {
       "type": "boolean",
-      "title": "Navigation Dots",
-      "description": ""
+      "title": "Navigation dots"
     }
-  }
+  },
+  "propertyOrder": [
+    "slides",
+    "loop",
+    "navigationDots"
+  ]
 }

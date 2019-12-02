@@ -1,65 +1,50 @@
 {
   "$schema": "http://bigcontent.io/cms/schema/v1/schema#",
-  "id": "https://unpkg.com/dc-accelerators-content-rendering-service/dist/contentTypes/card.json",
-  "title": "Card Accelerator",
-  "description": "Card Accelerator",
+  "id": "https://unpkg.com/dynamic-content-accelerators/dist/contentTypes/card.json",
+  "title": "Card",
+  "description": "Card accelerator",
   "allOf": [
     {
       "$ref": "http://bigcontent.io/cms/schema/v1/core#/definitions/content"
     }
   ],
-  "propertyOrder": [
-    "cardImage",
-    "cardName",
-    "description",
-    "linkValue",
-    "link"
-  ],
   "type": "object",
   "properties": {
     "cardImage": {
+      "description": "",
       "type": "object",
       "allOf": [
         {
-          "$ref": "http://bigcontent.io/cms/schema/v1/core#/definitions/content-link"
-        },
-        {
-          "properties": {
-            "contentType": {
-              "title": "image",
-              "enum": [
-                "https://unpkg.com/dc-accelerators-content-rendering-service/dist/contentTypes/image.json"
-              ]
-            }
-          }
+          "$ref": "https://unpkg.com/dynamic-content-accelerators/dist/contentTypes/image.json"
         }
       ],
-      "title": "Card Image",
-      "description": "Select or create an image content"
+      "title": "Card image"
     },
     "cardName": {
       "type": "string",
       "minLength": 0,
       "maxLength": 150,
-      "title": "Card name",
-      "description": ""
+      "title": "Card name"
     },
     "description": {
       "type": "string",
       "minLength": 0,
       "maxLength": 200,
-      "title": "Description",
-      "description": ""
+      "title": "Description"
     },
     "link": {
-      "title": "Link",
-      "description": "add Link",
       "type": "object",
       "allOf": [
         {
-          "$ref": "https://unpkg.com/dc-accelerators-content-rendering-service/dist/contentTypes/link.json"
+          "$ref": "https://unpkg.com/dynamic-content-accelerators/dist/contentTypes/accelerator-partials.json#/definitions/link"
         }
       ]
     }
-  }
+  },
+  "propertyOrder": [
+    "cardImage",
+    "cardName",
+    "description",
+    "link"
+  ]
 }
