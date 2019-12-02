@@ -48,9 +48,7 @@ Steps:
 ```
 npm install --global gulp-cli
 ```
-
 2. Run gulp:
-
 ```
 gulp buildAll
 ```
@@ -112,7 +110,24 @@ if (window.AmpCa && window.AmpCa.Utils) {
 * [Hosting Content Types externally](./docs/EXTERNAL-CONTENT-TYPES.md)
 * [Configuring images](./docs/CONFIGURING-IMAGES.md)
 
+## Changes in version 5.0.0
+
+These changes should ensure that the project is quick and easy to use, the content library has been brought to life and the content types are optimal.
+
+1. One project – content types, CSS, rendering service and non-rendering service all in one project.
+2. Beautiful cards – the cards are based on the mobile visualisation with a few edits.
+3. All content types have cards – the cards render as they would in a page, with auto scroll down if the content is too large for the space.
+4. All content types use the same card – one URL for all, one file to manage.
+5. Content type schemas have be reviewed and updated:
+    1. Modelling improved – content library only contains useful content and the user journey improved.
+    2. Content types that don’t have a render now exist as partials.
+    3. Content types for inline and external are exactly the same.
+    4. Image content types separated to allow for easy image optimisation. Templates containing images can now pass parameters to the image template, which simplifies the template and improves reuse. 
+    5. Fields have been updated to latest versions i.e. colour pickers etc..
+    6. POI has been added to all except banner (we have updated our POI library with cool new features and added the latest version). If POI is added to the content form this should work out of the box.
+
 ## Getting Help
+
 If you need help please reach out using one of the following channels:
 
 * Ask a question on [StackOverflow](https://stackoverflow.com/) using the tag `amplience-dynamic-content`
@@ -129,7 +144,7 @@ Licensed under the Apache License, Version 2.0 (the "License");
 you may not use this file except in compliance with the License.
 You may obtain a copy of the License at
 
-    http://www.apache.org/licenses/LICENSE-2.0
+http://www.apache.org/licenses/LICENSE-2.0
 
 Unless required by applicable law or agreed to in writing, software
 distributed under the License is distributed on an "AS IS" BASIS,
