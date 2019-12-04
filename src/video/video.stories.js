@@ -18,7 +18,7 @@ export const sampleContent = {
     "defaultHost": "i1.adis.ws"
   },
   "_title": "test_video",
-  "@type": "https://unpkg.com/dynamic-content-accelerators/dist/contentTypes/video.json"
+  "@type": "https://unpkg.com/@amplience/dynamic-content-accelerators/dist/contentTypes/video.json"
 };
 
 storiesOf('Video', module)

@@ -1,4 +1,4 @@
 {
-  "CONTENT_TYPE_BASEPATH": "https://unpkg.com/dynamic-content-accelerators/dist/contentTypes",
+  "CONTENT_TYPE_BASEPATH": "https://unpkg.com/@amplience/dynamic-content-accelerators/dist/contentTypes",
   "COMPANY_TAG": "csdemo"
 }

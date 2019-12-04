@@ -608,7 +608,7 @@ export const sampleContent = {
       ]
     }
   ],
-  "@type": "https://unpkg.com/dynamic-content-accelerators/dist/contentTypes/page.json"
+  "@type": "https://unpkg.com/@amplience/dynamic-content-accelerators/dist/contentTypes/page.json"
 };
 
 storiesOf('Page', module)
