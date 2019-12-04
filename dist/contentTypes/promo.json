@@ -1,6 +1,6 @@
 {
   "$schema": "http://bigcontent.io/cms/schema/v1/schema#",
-  "id": "https://unpkg.com/dynamic-content-accelerators/dist/contentTypes/promo.json",
+  "id": "https://unpkg.com/@amplience/dynamic-content-accelerators/dist/contentTypes/promo.json",
   "title": "Promo",
   "description": "Promo accelerator",
   "allOf": [
@@ -53,7 +53,7 @@
       "type": "object",
       "allOf": [
         {
-          "$ref": "https://unpkg.com/dynamic-content-accelerators/dist/contentTypes/accelerator-partials.json#/definitions/link"
+          "$ref": "https://unpkg.com/@amplience/dynamic-content-accelerators/dist/contentTypes/accelerator-partials.json#/definitions/link"
         }
       ]
     }

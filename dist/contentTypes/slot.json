@@ -5,7 +5,7 @@
       "$ref": "http://bigcontent.io/cms/schema/v1/core#/definitions/content"
     }
   ],
-  "id": "https://unpkg.com/dynamic-content-accelerators/dist/contentTypes/slot.json",
+  "id": "https://unpkg.com/@amplience/dynamic-content-accelerators/dist/contentTypes/slot.json",
   "title": "Slot",
   "description": "Slot accelerator",
   "type": "object",
@@ -21,19 +21,19 @@
             "properties": {
               "contentType": {
                 "enum": [
-                  "https://unpkg.com/dynamic-content-accelerators/dist/contentTypes/banner.json",
-                  "https://unpkg.com/dynamic-content-accelerators/dist/contentTypes/blogpost.json",
-                  "https://unpkg.com/dynamic-content-accelerators/dist/contentTypes/card.json",
-                  "https://unpkg.com/dynamic-content-accelerators/dist/contentTypes/cardlist.json",
-                  "https://unpkg.com/dynamic-content-accelerators/dist/contentTypes/externalblock.json",
-                  "https://unpkg.com/dynamic-content-accelerators/dist/contentTypes/image.json",
-                  "https://unpkg.com/dynamic-content-accelerators/dist/contentTypes/page.json",
-                  "https://unpkg.com/dynamic-content-accelerators/dist/contentTypes/promo.json",
-                  "https://unpkg.com/dynamic-content-accelerators/dist/contentTypes/promolist.json",
-                  "https://unpkg.com/dynamic-content-accelerators/dist/contentTypes/slider.json",
-                  "https://unpkg.com/dynamic-content-accelerators/dist/contentTypes/splitblock.json",
-                  "https://unpkg.com/dynamic-content-accelerators/dist/contentTypes/text.json",
-                  "https://unpkg.com/dynamic-content-accelerators/dist/contentTypes/video.json"
+                  "https://unpkg.com/@amplience/dynamic-content-accelerators/dist/contentTypes/banner.json",
+                  "https://unpkg.com/@amplience/dynamic-content-accelerators/dist/contentTypes/blogpost.json",
+                  "https://unpkg.com/@amplience/dynamic-content-accelerators/dist/contentTypes/card.json",
+                  "https://unpkg.com/@amplience/dynamic-content-accelerators/dist/contentTypes/cardlist.json",
+                  "https://unpkg.com/@amplience/dynamic-content-accelerators/dist/contentTypes/externalblock.json",
+                  "https://unpkg.com/@amplience/dynamic-content-accelerators/dist/contentTypes/image.json",
+                  "https://unpkg.com/@amplience/dynamic-content-accelerators/dist/contentTypes/page.json",
+                  "https://unpkg.com/@amplience/dynamic-content-accelerators/dist/contentTypes/promo.json",
+                  "https://unpkg.com/@amplience/dynamic-content-accelerators/dist/contentTypes/promolist.json",
+                  "https://unpkg.com/@amplience/dynamic-content-accelerators/dist/contentTypes/slider.json",
+                  "https://unpkg.com/@amplience/dynamic-content-accelerators/dist/contentTypes/splitblock.json",
+                  "https://unpkg.com/@amplience/dynamic-content-accelerators/dist/contentTypes/text.json",
+                  "https://unpkg.com/@amplience/dynamic-content-accelerators/dist/contentTypes/video.json"
                 ]
               }
             }
