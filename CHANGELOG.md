@@ -2,6 +2,15 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [5.0.1](https://github.com/amplience/dynamic-content-accelerators/compare/v5.0.0...v5.0.1) (2020-02-12)
+
+
+### Bug Fixes
+
+* **docs:** logo update ([cad5c52](https://github.com/amplience/dynamic-content-accelerators/commit/cad5c52))
+
+
+
 ## [5.0.0](https://github.com/amplience/dynamic-content-accelerators/compare/v4.0.0...v5.0.0) (2019-12-04)
 
 
