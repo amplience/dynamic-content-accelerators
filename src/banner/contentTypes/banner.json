@@ -15,7 +15,7 @@
       "type": "object",
       "allOf": [
         {
-          "$ref": "{CONTENT_TYPE_BASEPATH}/image.json"
+          "$ref": "{CONTENT_TYPE_BASEPATH}/imageEditor.json"
         }
       ],
       "title": "Banner image"

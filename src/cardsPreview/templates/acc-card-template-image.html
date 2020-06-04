@@ -1,4 +1,11 @@
-{{#if image}}
+{{#if image.image.defaultHost}}
+<img
+        src="//{{image.image.defaultHost}}/i/{{image.image.endpoint}}/{{encodeURI image.image.name}}?h={$this.layer0.metadata.image.height<300?100%:300}{{> acc-template-roundel }}"
+        class="" style="display: block; width: 100%;
+    user-select: none;" {{#if imageAltText}} alt="{{imageAltText}}" {{/if}} />
+{{/if}}
+
+{{#if image.defaultHost}}
 <img
         src="//{{image.defaultHost}}/i/{{image.endpoint}}/{{encodeURI image.name}}?h={$this.layer0.metadata.image.height<300?100%:300}{{> acc-template-roundel }}"
         class="" style="display: block; width: 100%;

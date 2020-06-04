@@ -1,30 +1,67 @@
 {{#if video}}
 <div class='amp-dc-video-wrap'>
     <video class="amp-dc-video" poster="//{{video.defaultHost}}/v/{{video.endpoint}}/{{video.name}}?protocol=https"
-           controls src="//{{video.defaultHost}}/v/{{video.endpoint}}/{{video.name}}/mp4_720p">
+           controls src="">
         <source src="//{{video.defaultHost}}/v/{{video.endpoint}}/{{video.name}}/mp4_720p"
                 data-res="High" data-bitrate="2119" label="High"
                 type="video/mpeg4" codecs="h264">
-
-        <source src="//{{video.defaultHost}}/v/{{video.endpoint}}/{{video.name}}/mp4_480p"
-                data-res="Medium" data-bitrate="689" label="Medium"
-                type="video/mpeg4" codecs="h264">
-
-        <source src="//{{video.defaultHost}}/v/{{video.endpoint}}/{{video.name}}/mp4_240p"
-                data-res="Low" data-bitrate="325" label="Low"
-                type="video/mpeg4" codecs="h264">
-
         <source src="//{{video.defaultHost}}/v/{{video.endpoint}}/{{video.name}}/webm_720p"
                 data-res="High" data-bitrate="2000" label="High"
                 type="video/webm" codecs="vp8">
-
+        <source src="//{{video.defaultHost}}/v/{{video.endpoint}}/{{video.name}}/mp4_480p"
+                data-res="Medium" data-bitrate="689" label="Medium"
+                type="video/mpeg4" codecs="h264">
         <source src="//{{video.defaultHost}}/v/{{video.endpoint}}/{{video.name}}/webm_480p"
                 data-res="Medium" data-bitrate="624" label="Medium"
                 type="video/webm" codecs="vp8">
-
+        <source src="//{{video.defaultHost}}/v/{{video.endpoint}}/{{video.name}}/mp4_240p"
+                data-res="Low" data-bitrate="325" label="Low"
+                type="video/mpeg4" codecs="h264">
         <source src="//{{video.defaultHost}}/v/{{video.endpoint}}/{{video.name}}/webm_240p"
                 data-res="Low" data-bitrate="325" label="Low"
                 type="video/webm" codecs="vp8">
     </video>
 </div>
 {{/if}}
+
+<script>
+  const debounce = (func, delay) => {
+    var inDebounce;
+    return function() {
+      clearTimeout(inDebounce);
+      inDebounce = setTimeout(() => func.apply({}), delay);
+    };
+  };
+
+  function getRelevants(current, screenWidth) {
+    var sources = current.getElementsByTagName('source');
+
+    if (screenWidth < 768) {
+      return [sources[4], sources[5]];
+    } else if (screenWidth < 1024) {
+      return [sources[2], sources[3]]
+    }
+
+    return [sources[0], sources[1]]
+  }
+
+  function updateSize() {
+    var screenWidth = window.innerWidth;
+    var videos = document.getElementsByClassName('amp-dc-video');
+
+    for (var i = videos.length - 1; i >= 0; i--) {
+      var current = videos[i];
+      var currentSrc = current.currentSrc;
+      var relevants = getRelevants(current, screenWidth);
+      var relUrl = relevants.length ? relevants[0].src : '';
+
+      if (relUrl !== currentSrc) {
+        current.src = relUrl;
+        current.load();
+      }
+    }
+  }
+
+  window.addEventListener('resize', debounce(updateSize, 600));
+  updateSize();
+</script>

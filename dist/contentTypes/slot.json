@@ -27,6 +27,7 @@
                   "https://unpkg.com/@amplience/dynamic-content-accelerators/dist/contentTypes/cardlist.json",
                   "https://unpkg.com/@amplience/dynamic-content-accelerators/dist/contentTypes/externalblock.json",
                   "https://unpkg.com/@amplience/dynamic-content-accelerators/dist/contentTypes/image.json",
+                  "https://unpkg.com/@amplience/dynamic-content-accelerators/dist/contentTypes/imageEditor.json",
                   "https://unpkg.com/@amplience/dynamic-content-accelerators/dist/contentTypes/page.json",
                   "https://unpkg.com/@amplience/dynamic-content-accelerators/dist/contentTypes/promo.json",
                   "https://unpkg.com/@amplience/dynamic-content-accelerators/dist/contentTypes/promolist.json",

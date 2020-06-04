@@ -1,0 +1,134 @@
+{
+  "$schema": "http://bigcontent.io/cms/schema/v1/schema#",
+  "id": "{CONTENT_TYPE_BASEPATH}/imageEditor.json",
+  "title": "Image Editor",
+  "description": "Image accelerator",
+  "allOf": [
+    {
+      "$ref": "http://bigcontent.io/cms/schema/v1/core#/definitions/content"
+    }
+  ],
+  "propertyOrder": [
+    "image",
+    "imageAltText",
+    "seoText",
+    "roundel"
+  ],
+  "type": "object",
+  "properties": {
+    "image": {
+      "title": "Image",
+      "description": "An image with DI transformations included.",
+      "type": "object",
+      "properties": {
+        "image": {
+          "title": "Base Image",
+          "description": "The base image to apply DI transformations to.",
+          "allOf": [
+            {
+              "": "http://bigcontent.io/cms/schema/v1/core#/definitions/image-link"
+            }
+          ]
+        },
+        "crop": {
+          "title": "Crop",
+          "description": "The crop rectangle to apply, in % scale.",
+          "type": "array",
+          "minItems": 4,
+          "maxItems": 4,
+          "items": {
+            "type": "number",
+            "default": 0
+          }
+        },
+        "poi": {
+          "title": "Point of Interest",
+          "description": "The point of interest, in % scale.",
+          "type": "object",
+          "properties": {
+            "x": {
+              "title": "X",
+              "description": "The x coordinate",
+              "type": "number"
+            },
+            "y": {
+              "title": "Y",
+              "description": "The y coordinate",
+              "type": "number"
+            }
+          }
+        },
+        "rot": {
+          "title": "Rotate",
+          "description": "The rotation modifier (in degrees)",
+          "type": "number"
+        },
+        "hue": {
+          "title": "Hue",
+          "description": "The hue modifier",
+          "type": "number"
+        },
+        "sat": {
+          "title": "Saturation",
+          "description": "The saturation modifier",
+          "type": "number"
+        },
+        "bri": {
+          "title": "Brightness",
+          "description": "The brightness modifier",
+          "type": "number"
+        },
+        "fliph": {
+          "title": "Horizontal Flip",
+          "description": "Whether the image should be horizontally flipped",
+          "type": "boolean"
+        },
+        "flipv": {
+          "title": "Vertical Flip",
+          "description": "Whether the image should be vertically flipped",
+          "type": "boolean"
+        },
+        "aspectLock": {
+          "title": "Crop Aspect Ratio",
+          "description": "The aspect ratio to use when resizing the crop rectangle, eg: 4:3. Use 'none' to unlock aspect.",
+          "type": "string"
+        },
+        "query": {
+          "title": "DI Query String",
+          "description": "A query string baked with all the above parameters.",
+          "type": "string"
+        }
+      },
+      "ui:extension": {
+        "url": "https://flamboyant-kilby-956037.netlify.com/static/dc-uiex-di/index.html",
+        "height": 500
+      }
+    },
+    "imageAltText": {
+      "type": "string",
+      "minLength": 0,
+      "maxLength": 150,
+      "title": "Image alt text"
+    },
+    "seoText": {
+      "type": "string",
+      "minLength": 0,
+      "maxLength": 100,
+      "title": "SEO text",
+      "pattern": "^[\/A-Za-z0-9+_-]+$",
+      "description": "Enter only alphanumeric, _, -, +, / characters"
+    },
+    "roundel": {
+      "title": "Roundels",
+      "type": "array",
+      "maxItems": 5,
+      "items": {
+        "allOf": [
+          {
+            "$ref": "{CONTENT_TYPE_BASEPATH}/accelerator-partials.json#/definitions/roundel"
+          }
+        ]
+      }
+    }
+  }
+}

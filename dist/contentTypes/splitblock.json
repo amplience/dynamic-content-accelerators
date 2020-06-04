@@ -22,6 +22,7 @@
               "contentType": {
                 "enum": [
                   "https://unpkg.com/@amplience/dynamic-content-accelerators/dist/contentTypes/image.json",
+                  "https://unpkg.com/@amplience/dynamic-content-accelerators/dist/contentTypes/imageEditor.json",
                   "https://unpkg.com/@amplience/dynamic-content-accelerators/dist/contentTypes/video.json",
                   "https://unpkg.com/@amplience/dynamic-content-accelerators/dist/contentTypes/text.json"
                 ]

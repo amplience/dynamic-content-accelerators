@@ -1,24 +1,25 @@
 <div class="amp-dc-card">
     {{#if link}}
     <a class="amp-dc-card-wrap" href="{{link.value}}">
-    {{else}}
-    <div class="amp-dc-card-wrap">
-        {{/if}}
+        {{else}}
+        <div class="amp-dc-card-wrap">
+            {{/if}}
 
-        <div class="amp-dc-card-img-wrap amp-dc-poi-image">
-            {{> acc-template-image-generator
-                    image=cardImage
-                    mediaQueries='[
-                        {"query": 768, "width": 768},
-                        {"query": 1024, "width": 512},
-                        {"query": 1025, "width": 800}
-                    ]'
-                    classNames='card'
-            }}
-        </div>
+            <div class="amp-dc-card-img-wrap amp-dc-image">
+                {{> acc-template-image-generator
+                image=cardImage
+                imageObj=cardImage.image
+                mediaQueries='[
+                {"query": 768, "width": 768, "x1": "&sm=aspect&aspect=1:1&h=100%", "x2": "&sm=aspect&aspect=1:1&h=200%"},
+                {"query": 1024, "width": 512, "x1": "&sm=aspect&aspect=1:1&h=100%", "x2": "&sm=aspect&aspect=1:1&h=200%"},
+                {"query": 1025, "width": 800, "x1": "", "x2": ""}
+                ]'
+                classNames='card'
+                }}
+            </div>
 
 
-        <div class="amp-dc-card-text-wrap
+            <div class="amp-dc-card-text-wrap
         {{#unless cardName}}
             {{#unless description}}
                 {{#unless link}}
@@ -27,27 +28,27 @@
             {{/unless}}
         {{/unless}}">
 
-            {{#if cardName}}
-            <div class="amp-dc-card-name">{{cardName}}</div>
-            {{/if}}
-            {{#if description}}
-            <p class="amp-dc-card-description">{{description}}</p>
-            {{/if}}
-            {{#if link}}
-            <div class="amp-dc-card-link">
-                {{#if link.label}}
-                {{link.label}}
-                {{else}}
-                >>
+                {{#if cardName}}
+                <div class="amp-dc-card-name">{{cardName}}</div>
+                {{/if}}
+                {{#if description}}
+                <p class="amp-dc-card-description">{{description}}</p>
+                {{/if}}
+                {{#if link}}
+                <div class="amp-dc-card-link">
+                    {{#if link.label}}
+                    {{link.label}}
+                    {{else}}
+                    >>
+                    {{/if}}
+                </div>
                 {{/if}}
             </div>
-            {{/if}}
-        </div>
 
-        {{#if link}}
-        </a>
-        {{else}}
-    </div>
-    {{/if}}
+            {{#if link}}
+    </a>
+    {{else}}
+</div>
+{{/if}}
 
 </div>

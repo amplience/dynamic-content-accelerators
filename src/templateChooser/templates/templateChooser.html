@@ -26,6 +26,10 @@
 {{> acc-template-image this}}
 {{~/if}}
 
+{{#if (test this.[@type] (toRegex ".*/imageEditor")) ~}}
+{{> acc-template-image this}}
+{{~/if}}
+
 {{#if (test this.[0].[@type] (toRegex ".*/image")) ~}}
 {{> acc-template-image this.[0]}}
 {{~/if}}

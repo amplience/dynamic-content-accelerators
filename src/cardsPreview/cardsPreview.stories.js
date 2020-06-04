@@ -17,6 +17,7 @@ import {sampleContent as sampleCardContent} from '../card/card.stories';
 import {sampleContent as sampleCardListContent} from '../cardList/cardList.stories';
 import {sampleContent as sampleExternalBlockContent} from '../externalBlock/externalBlock.stories';
 import {sampleContent as sampleImageContent} from '../image/image.stories';
+import {sampleEditorContent as sampleEditorContent} from '../image/image.stories';
 import {sampleContent as samplePromoContent} from '../promo/promo.stories';
 import {samplePromoListContent as samplePromoListContent} from '../promo/promo.stories';
 import {sampleContent as sampleSplitBlockContent} from '../splitBlock/splitBlock.stories';
@@ -31,6 +32,7 @@ storiesOf('Cards Preview', module)
   .add('Card list card', () => renderContent('acc-template-cardsPreview', sampleCardListContent))
   .add('External block card', () => renderContent('acc-template-cardsPreview', sampleExternalBlockContent))
   .add('Image card', () => renderContent('acc-template-cardsPreview', sampleImageContent))
+  .add('Image Editor card', () => renderContent('acc-template-cardsPreview', sampleEditorContent))
   .add('Page card', () => renderContent('acc-template-cardsPreview', samplePageContent))
   .add('Promo card', () => renderContent('acc-template-cardsPreview', samplePromoContent))
   .add('Promo list', () => renderContent('acc-template-cardsPreview', samplePromoListContent))

@@ -1,10 +1,24 @@
-<div class="amp-dc-poi-image">
+<div class="{{#if this.image.image}}amp-dc-image{{else}}amp-dc-poi-image{{/if}}">
+    {{#if this.image.image}}
     {{> acc-template-image-generator
-            image=this
-            mediaQueries='[
-                {"query": 768, "width": 768},
-                {"query": 1024, "width": 1024},
-                {"query": 1025, "width": 1600}
-            ]'
+        image=this
+        imageObj=this.image
+        mediaQueries='[
+        {"query": 768, "x1": "sm=aspect&aspect=1:1&h=100%", "x2": "sm=aspect&aspect=1:1&h=200%"},
+        {"query": 1024, "x1": "sm=aspect&aspect=2:1&h=100%", "x2": "sm=aspect&aspect=2:1&h=200%"},
+        {"query": 1025, "x1": "", "x2": ""}
+        ]'
     }}
+    {{else}}
+    {{> acc-template-image-generator
+    image=this
+    imageObj=this
+    mediaQueries='[
+    {"query": 768, "width": 768},
+    {"query": 1024, "width": 1024},
+    {"query": 1025, "width": 1600}
+    ]'
+    imageClassName="amp-dc-image-pic"
+    }}
+    {{/if}}
 </div>

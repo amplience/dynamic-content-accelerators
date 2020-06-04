@@ -13,6 +13,7 @@ const components = [
   ['Card List', 'cardList'],
   ['External Block', 'externalBlock'],
   ['Image', 'image'],
+  ['Image Editor', 'image', 'sampleEditorContent'],
   ['Page', 'page'],
   ['Promo', 'promo'],
   ['Promo List', 'promo', 'samplePromoListContent'],

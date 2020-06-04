@@ -22,6 +22,7 @@
               "contentType": {
                 "enum": [
                   "{CONTENT_TYPE_BASEPATH}/image.json",
+                  "{CONTENT_TYPE_BASEPATH}/imageEditor.json",
                   "{CONTENT_TYPE_BASEPATH}/video.json",
                   "{CONTENT_TYPE_BASEPATH}/text.json"
                 ]

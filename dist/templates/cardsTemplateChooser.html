@@ -22,11 +22,15 @@
 {{> acc-card-template-slider }}
 {{~/if}}
 
-{{#if (test this.[@type] (toRegex ".*/image")) ~}}
+{{#if (test this.[@type] (toRegex ".*/imageEditor.json")) ~}}
+{{> acc-card-template-image this.image}}
+{{~/if}}
+
+{{#if (test this.[@type] (toRegex ".*/image.json")) ~}}
 {{> acc-card-template-image this}}
 {{~/if}}
 
-{{#if (test this.[0].[@type] (toRegex ".*/image")) ~}}
+{{#if (test this.[0].[@type] (toRegex ".*/image.json")) ~}}
 {{> acc-card-template-image this.[0]}}
 {{~/if}}
 
